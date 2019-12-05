@@ -1,6 +1,6 @@
 //All the data required for the project goes here. Follow the same structure
 
-/*import room1 from "./images/details-1.jpeg";
+import room1 from "./images/details-1.jpeg";
 import room2 from "./images/details-2.jpeg";
 import room3 from "./images/details-3.jpeg";
 import room4 from "./images/details-4.jpeg";
@@ -759,4 +759,4 @@ export default [
       ]
     }
   }
-];*/
+];
