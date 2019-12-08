@@ -7,11 +7,15 @@ export default function Card({ card }) {
     return (
         <div className = "main_card">
             <div className="card">
-                <img src={dogImg} alt="Avatar" />
+                <div className="card-body">
+                    <img className ="card-img-top" src={dogImg} alt="Avatar" />
+                </div>
             </div>
 
             <div className="card">
-                <img src={catImg} alt="Avatar" />
+                <div className="card-body">
+                    <img className ="card-img-top" src={catImg} alt="Avatar" />
+                </div>
             </div>
         </div>
     );

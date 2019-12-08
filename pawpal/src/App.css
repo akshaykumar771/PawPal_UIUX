@@ -192,7 +192,6 @@
   /* The sidebar menu */
   .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 360px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -228,29 +227,34 @@
     .sidenav a {font-size: 18px;}
   }
   /* End of Side-Nav */
+
+  .content-justify{
+    padding: 20px;
+  }
   
   /* Start of card */
   .main_card {
-    display: flex;
+      display: flex;
       justify-content: center;
       margin-left: 25%;
       align-items: center;
       height: 100vh;
       background: #DFCDC3;
   }
-  .card {
+
+  .main_card > .card {
     /* Add shadows to create the "card" effect */
     transition: 0.3s;
     width: 400px;
     margin: 20px;
     cursor: pointer;
+    border: 5px solid grey;
   }
-  
-  .card > img {
-      max-width: 400px;
-      border: 5px solid grey;
-      border-radius: 20%;
+
+  .main_card > .card > .card-body {
+    padding: 0;
   }
+
   
   /* Pet Container */
   .pet_container {
