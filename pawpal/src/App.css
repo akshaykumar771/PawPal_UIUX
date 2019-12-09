@@ -230,6 +230,15 @@
 
   .content-justify{
     padding: 20px;
+    background: #DFCDC3;
+  }
+
+  .filter-class {
+    background: white;
+    padding: 5px;
+    margin-left: 15px;
+    max-width: 98%;
+    margin-bottom: 15px;
   }
   
   /* Start of card */
