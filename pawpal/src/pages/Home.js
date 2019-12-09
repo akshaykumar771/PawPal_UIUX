@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { FaPaw } from "react-icons/fa"
+import Services from "../components/Services";
+import NewPets from "../components/NewPets";
 export default function Home() {
   return (
     <>
@@ -12,11 +14,13 @@ export default function Home() {
           subtitle="Don't shop, Just ADOPT..!!"
         >
         <p className="landing-p">Begin your love for Adoption</p>
-          <Link to="/rooms" className="landing-btn">
+          <Link to="/choosepets" className="landing-btn">
             <FaPaw />
           </Link>
         </Banner>
       </Hero>
+      <Services />
+      <NewPets />
     </>
   );
 }
