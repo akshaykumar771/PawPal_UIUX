@@ -133,20 +133,20 @@ class PetsProvider extends Component {
 //       sortedRooms: tempRooms
 //     });
 //   };
-//   render() {
-//     return (
-//       <PetContext.Provider
-//         value={{
-//           ...this.state,
+ render() {
+    return (
+      <PetContext.Provider
+       value={{
+         ...this.state
 //           getRoom: this.getRoom,
 //           handleChange: this.handleChange
-//         }}
-//       >
-//         {this.props.children}
-//       </PetContext.Provider>
-//     );
-//   }
-// }
+         }}
+       >
+         {this.props.children}
+       </PetContext.Provider>
+     );
+   }
+}
 
 // const PetsConsumer = PetContext.Consumer;
 
@@ -158,6 +158,6 @@ class PetsProvider extends Component {
 //       </RoomConsumer>
 //     );
 //   };
-}
+//}
 
 export { PetsProvider, PetContext };
