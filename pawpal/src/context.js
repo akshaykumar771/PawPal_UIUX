@@ -12,13 +12,8 @@ class PetsProvider extends Component {
     loading: true,
     type: "all",
     capacity: 1,
-    price: 0,
-    minPrice: 0,
-    maxPrice: 0,
-    minSize: 0,
-    maxSize: 0,
+    gender: "all",
     breakfast: false,
-    pets: false
   };
   // getData
   // getData = async () => {
@@ -71,11 +66,11 @@ class PetsProvider extends Component {
     });
     return tempItems;
   }
-//   getRoom = slug => {
-//     let tempRooms = [...this.state.rooms];
-//     const room = tempRooms.find(room => room.slug === slug);
-//     return room;
-//   };
+  getPet = slug => {
+    let tempPets = [...this.state.pets];
+    const pet = tempPets.find(pet => pet.slug === slug);
+    return pet;
+  };
 //   handleChange = event => {
 //     const target = event.target;
 //     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -137,8 +132,8 @@ class PetsProvider extends Component {
     return (
       <PetContext.Provider
        value={{
-         ...this.state
-//           getRoom: this.getRoom,
+         ...this.state,
+           getPet: this.getPet,
 //           handleChange: this.handleChange
          }}
        >
@@ -148,7 +143,7 @@ class PetsProvider extends Component {
    }
 }
 
-// const PetsConsumer = PetContext.Consumer;
+ const PetsConsumer = PetContext.Consumer;
 
 // export function withRoomConsumer(Component) {
 //   return function ConsumerWrapper(props) {
@@ -160,4 +155,4 @@ class PetsProvider extends Component {
 //   };
 //}
 
-export { PetsProvider, PetContext };
+export { PetsProvider, PetsConsumer, PetContext };
