@@ -3,7 +3,7 @@ import items from "./data";
 // import Client from "./Contentful";
 
 const PetContext = React.createContext();
-// <RoomContext.Provider value={'hello'}
+
 class PetsProvider extends Component {
   state = {
     pets: [],
@@ -145,14 +145,14 @@ class PetsProvider extends Component {
 
  const PetsConsumer = PetContext.Consumer;
 
-// export function withRoomConsumer(Component) {
-//   return function ConsumerWrapper(props) {
-//     return (
-//       <RoomConsumer>
-//         {value => <Component {...props} context={value} />}
-//       </RoomConsumer>
-//     );
-//   };
-//}
+export function withPetsConsumer(Component) {
+  return function ConsumerWrapper(props) {
+    return (
+      <PetsConsumer>
+        {value => <Component {...props} context={value} />}
+      </PetsConsumer>
+    );
+  };
+}
 
 export { PetsProvider, PetsConsumer, PetContext };

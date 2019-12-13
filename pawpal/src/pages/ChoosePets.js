@@ -6,7 +6,8 @@ import Card from "../components/Card";
 const ChoosePets = () => {
   return (
     <>
-      <SideNav />
+    
+      
       <Card />
     </>
   );
