@@ -4,6 +4,7 @@ import SideNav from "./components/SideNav";
 import Home from "./pages/Home";
 import ChoosePets from "./pages/ChoosePets";
 import Pets from "./pages/Pets";
+import cats from "./pages/Cats";
 import SinglePet from "./pages/SinglePet";
 import Error from "./pages/Error";
 
@@ -18,7 +19,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/choosepets/" component={ChoosePets} />
-            <Route exact path="/choosepets/:type" component={Pets} />
+            <Route exact path="/choosepets/Dogs" component={Pets} />
+            <Route exact path="/choosepets/Cats" component={cats} />
             <Route exact path="/pets/:slug" component={SinglePet} />
             <Route component={Error} />
           </Switch>

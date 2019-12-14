@@ -1,20 +1,29 @@
-import React from "react";
+import React, { Component } from 'react'
 import Pet from "./Pet";
-export default function PetList({ pets }) {
-  if (pets.length === 0) {
+import { PetContext } from "../context";
+import Loading from "../components/Loading";
+export default class PetList extends Component {
+  static contextType = PetContext;
+  render() {
+    let { loading, typeDog: pets } = this.context;
+    pets = pets.map(pet => {
+      return <Pet key={pet.id} pet={pet} />;
+    });  
+    if (pets.length === 0) {
+      return (
+         <div className="empty-search"> 
+          <h3>unfortunately no pets matched your search parameters</h3>
+        </div>
+      );
+    }
     return (
-       <div className="empty-search">
-        <h3>unfortunately no pets matched your search parameters</h3>
-      </div>
-    );
+      <section className="new-pets">
+            <div className="featured-rooms-center">
+            {loading ? <Loading /> : pets}
+            </div>
+          </section>
+    )
   }
-  return (
-    <section className="roomslist">
-      <div className="roomslist-center">
-        {pets.map(item => {
-          return <Pet key={item.id} pet={item} />;
-        })}
-      </div>
-   </section> 
-  );
 }
+
+
