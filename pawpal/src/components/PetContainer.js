@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import PetFilter from "./Petfilter";
-=======
-import DogFilter from "./DogFilter";
->>>>>>> d9c9496484370c4455f2b29ce7bcb65a3d04aa6f
 import PetList from "./PetList";
 import Pets from "../pages/Pets"
 import { withPetsConsumer, PetsConsumer } from "../context";
