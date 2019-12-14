@@ -373,7 +373,13 @@
     background: var(--primaryColor);
   }
   /* end of Title */
-  
+  .no-rpadding {
+    padding-right: 0;
+  }
+
+  .no-lpadding {
+    padding-left: 0;
+  }
   /* services */
   .services {
     padding: 2rem 0;
