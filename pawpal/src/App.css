@@ -20,7 +20,7 @@
     /* padding-top: 66px; */
     color: var(--mainBlack);
     background: var(--mainWhite);
-    font-family: "Comic Sans MS", Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.4;
   }
   h1 {
@@ -67,14 +67,14 @@
   }
   
   .landing-p{
-    margin-right: 13%;
-    margin-top: 30%;
+    font-size: 24px;
+    color: black;
   }
   
   .landing-btn {
     position: absolute;
-    top: 69%;
-    right: 6%;
+    bottom: -25px;
+    right: -100px;
     width: 75px;
     line-height: 75px;
     text-align:center;
@@ -290,12 +290,31 @@
     padding: 2px 16px;
   }
   /* end of card */
+
+  /*Flex box */
+  .flex-box {
+    display: flex;
+  }
+
+  .vertical-center{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100vh;
+  }
+
+  .vertical-bottom {
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+  }
+  /*Flex box end*/
   
   /* Hero */
   .defaultHero,
   .roomsHero {
     min-height: calc(100vh);
-    background: url("./images/landing.png") center/cover no-repeat;
+    background: url("./images/landing_1.jpg") center/cover no-repeat;
     text-align: right;
   
   }
@@ -357,8 +376,13 @@
   
   /* services */
   .services {
-    padding: 5rem 0;
+    padding: 2rem 0;
   }
+
+  .new-pets {
+    padding: 2rem 0;
+  }
+  
   .services {
     background: var(--darkGrey);
     text-align: center;
