@@ -46,11 +46,15 @@ class PetsProvider extends Component {
     // this.getData();
     let pets  = this.formatData(items);
     let newPets = pets.filter(pet => pet.featured === true);
+    let typeDog = pets.filter(pet => pet.type === "Dog");
+    let typeCat = pets.filter(pet => pet.type === "Cat");
     //let maxPrice = Math.max(...rooms.map(item => item.price));
     //let maxSize = Math.max(...rooms.map(item => item.size));
     this.setState({
       pets, 
       newPets,
+      typeDog,
+      typeCat,
       sortedPets: pets,
       loading: false,
     });
@@ -71,6 +75,11 @@ class PetsProvider extends Component {
     const pet = tempPets.find(pet => pet.slug === slug);
     return pet;
   };
+  getPetType = type => {
+    let tempPetType = [...this.state.pets];
+    const petType = tempPetType.find(pet => pet.type === type);
+    return petType;
+  }
 //   handleChange = event => {
 //     const target = event.target;
 //     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -134,6 +143,7 @@ class PetsProvider extends Component {
        value={{
          ...this.state,
            getPet: this.getPet,
+           getPetType: this.getPetType
 //           handleChange: this.handleChange
          }}
        >
