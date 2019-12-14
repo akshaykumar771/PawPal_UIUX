@@ -3,11 +3,12 @@ import dogImg from "../images/Dog_choose_1.png";
 import catImg from "../images/Cat_choose_1.png";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import SideNav from "./SideNav"
 export default function Card({ pet }) {
     //const {type,images} = pet;
     return (
         <>
-        
+        <SideNav />
         <div className = "main_card">
         
             <div className="card">
