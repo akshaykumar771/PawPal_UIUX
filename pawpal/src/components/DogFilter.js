@@ -3,27 +3,26 @@ import { useContext } from "react";
 import { PetContext } from "../context";
 import Title from "./Title";
 
-// get all unique values
+//get all unique values
 const getUnique = (items, value) => {
-  
-   return [...new Set(items.map(item => item[value]))];
-  //return console.log(items);
+  return [...new Set(items.map(item => item[value]))];
 };
 export default function PetFilter({ pets }) {
-  const context = useContext(PetContext);
-  const {
-    handleChange,
-    gender,
-  } = context;
-  // get unique types
-  let genders = getUnique(pets, "gender");
+   const context = useContext(PetContext);
+   const {
+     handleChange,
+     gender,
+  
+   } = context;
+  // // get unique types
+  let genders = getUnique(pets, "type");
   // add all
- genders = ["all", ...genders];
+  genders = ["all", ...genders];
 
   // // map to jsx
   genders = genders.map((item, index) => {
     return (
-      <option value={item} key={index}>
+      <option value={item} key={index} >
         {item}
       </option>
     );
@@ -36,6 +35,7 @@ export default function PetFilter({ pets }) {
   //     </option>
   //   );
   // });
+
    return (
      
         <section className="filter-container">
@@ -45,9 +45,9 @@ export default function PetFilter({ pets }) {
         <div className="form-group">
           <label htmlFor="gender">select gender</label>
           <select
-            gender="gender"
+            name="gender"
             id="gender"
-            value={gender}
+            //value={gender}
             className="form-control"
             onChange={handleChange}
           >
