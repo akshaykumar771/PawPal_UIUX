@@ -17,8 +17,6 @@ function PetContainer({ context }) {
      
     </>
   );
- 
-  
 }
 
 export default withPetsConsumer(PetContainer);
