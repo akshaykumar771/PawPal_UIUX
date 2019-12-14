@@ -1,38 +1,33 @@
 import React from "react";
 import { useContext } from "react";
-import { RoomContext } from "../context";
+import { PetContext } from "../context";
 import Title from "./Title";
+
 // get all unique values
 const getUnique = (items, value) => {
-  return [...new Set(items.map(item => item[value]))];
+  
+   return [...new Set(items.map(item => item[value]))];
+  //return console.log(items);
 };
-export default function PetFilter({ rooms }) {
-  // const context = useContext(RoomContext);
-  // const {
-  //   handleChange,
-  //   type,
-  //   capacity,
-  //   price,
-  //   minPrice,
-  //   maxPrice,
-  //   minSize,
-  //   maxSize,
-  //   breakfast,
-  //   pets
-  // } = context;
-  // // get unique types
-  // let types = getUnique(rooms, "type");
-  // // add all
-  // types = ["all", ...types];
+export default function PetFilter({ pets }) {
+  const context = useContext(PetContext);
+  const {
+    handleChange,
+    gender,
+  } = context;
+  // get unique types
+  let genders = getUnique(pets, "gender");
+  // add all
+ genders = ["all", ...genders];
 
   // // map to jsx
-  // types = types.map((item, index) => {
-  //   return (
-  //     <option value={item} key={index}>
-  //       {item}
-  //     </option>
-  //   );
-  // });
+  genders = genders.map((item, index) => {
+    return (
+      <option value={item} key={index}>
+        {item}
+      </option>
+    );
+  });
   // let people = getUnique(rooms, "capacity");
   // people = people.map((item, index) => {
   //   return (
@@ -42,9 +37,26 @@ export default function PetFilter({ rooms }) {
   //   );
   // });
    return (
-     <div>
-       <h3>Hello from Pet Filter</h3>
-     </div>
+     
+        <section className="filter-container">
+      <Title title="search dogs" />
+      <form className="filter-form">
+        {/*select type  */}
+        <div className="form-group">
+          <label htmlFor="gender">select gender</label>
+          <select
+            gender="gender"
+            id="gender"
+            value={gender}
+            className="form-control"
+            onChange={handleChange}
+          >
+            {genders}
+          </select>
+        </div>
+        </form>
+        </section> 
+     
   //   <section className="filter-container">
   //     <Title title="search rooms" />
   //     <form className="filter-form">

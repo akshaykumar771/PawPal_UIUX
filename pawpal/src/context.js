@@ -11,7 +11,9 @@ class PetsProvider extends Component {
     newPets: [],
     loading: true,
     type: "all",
-    capacity: 1,
+    age: "0",
+    minAge: 0,
+    maxAge: 0,
     gender: "all",
     breakfast: false,
     typeDog: [],
@@ -50,7 +52,8 @@ class PetsProvider extends Component {
     let newPets = pets.filter(pet => pet.featured === true);
     let typeDog = pets.filter(pet => pet.type === "Dog");
     let typeCat = pets.filter(pet => pet.type === "Cat");
-    
+    let maxAge = Math.max(...pets.map(item => item.age));
+
     this.setState({
       pets, 
       newPets,
@@ -58,6 +61,8 @@ class PetsProvider extends Component {
       typeCat,
       sortedPets: pets,
       loading: false,
+      age: maxAge,
+      maxAge,
     });
   }
 
@@ -81,18 +86,24 @@ class PetsProvider extends Component {
     const petType = tempPetType.find(pet => pet.type === type);
     return petType;
   }
-//   handleChange = event => {
-//     const target = event.target;
-//     const value = target.type === "checkbox" ? target.checked : target.value;
-//     const name = event.target.name;
-
-//     this.setState(
-//       {
-//         [name]: value
-//       },
-//       this.filterRooms
-//     );
-//   };
+  handleChange = event => {
+    // const target = event.target;
+    // //const value = target.type === "checkbox" ? target.checked : target.value;
+    // const gender = event.target.gender;
+    // const value = event.target.value;
+    // const name = event.target.name;
+    // console.log(target, gender, value, name);
+    const test = "akshay";
+    console.log(test);
+    // this.setState(
+    //   {
+    //     [gender]: value
+    //   },
+    // );
+  };
+  filterPets = () =>{
+    console.log("Hello filter pets");
+  }
 //   filterRooms = () => {
 //     let {
 //       rooms,
