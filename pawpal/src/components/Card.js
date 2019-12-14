@@ -10,30 +10,24 @@ export default function Card({ pet }) {
         <>
         <SideNav />
         <div className = "main_card">
-        
             <div className="card">
-            
                 <div className="card-body">
-                <div className="img-container">
-                    <img className ="card-img-top" src={dogImg} alt="Avatar" />
-                    <Link to={`/choosepets/Dogs`} className="btn-primary room-link">
-           Details
-        </Link>
+                    <div className="img-container">
+                        <img className ="card-img-top" src={dogImg} alt="Avatar" />
+                        <Link to={`/choosepets/Dogs`} className="btn-primary room-link">
+                        Dog Person ?</Link>
+                    </div>
                 </div>
             </div>
 
             <div className="card">
-            
                 <div className="card-body">
-                <div className="img-container">
-                    <img className ="card-img-top" src={catImg} alt="Avatar" />
-                    <Link to={`/choosepets/Cats`} className="btn-primary room-link">
-           Details
-        </Link>
-        </div>
+                    <div className="img-container">
+                        <img className ="card-img-top" src={catImg} alt="Avatar" />
+                    <Link to={`/choosepets/Cats`} className="btn-primary room-link">Cat Person ?</Link>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         </>
     );

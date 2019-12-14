@@ -46,31 +46,62 @@ export default class SinglePet extends Component {
           const [mainImg, ...defaultImg] = images;
         return (
             <div>
-                {/* <SideNav /> */}
+                <SideNav />
                 <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero>
-                <section className="single-room">
-          <div className="single-room-images">
-            {defaultImg.map((item, index) => {
-              return <img key={index} src={item} alt={name} />;
-            })}
-          </div>
-          <div className="single-room-info">
-            <article className="desc">
-              <h3>details</h3>
-              <p>{description}</p>
-            </article>
-            <article className="info">
-              <h3>info</h3>
-              <h6>age : {age} months old</h6>
-              <h6>gender : {gender}</h6>
-              <h6>Breed : {slug}</h6>
-              <h3>Owner Details</h3>
-              <h6>name: {uname}</h6>
-              <h6>email: {email}</h6>
-              <h6>telephone: {phno}</h6>
-            </article>
-          </div>
-        </section> 
+                <div className="col-md-9 offset-3">
+                  {/* <div className="single-room-images">
+                    {defaultImg.map((item, index) => {
+                      return <img key={index} src={item} alt={name} />;
+                    })}
+                  </div> */}
+                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                   {defaultImg.map((item, index) => { 
+                     return <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img key={index} class="d-block w-100" src={item} alt={name} />
+                      </div>
+                    </div>
+                    })}
+                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <div className="row col-md-12 no-rpadding">
+                    <div className="desc">
+                      <div className="card text-white bg-secondary mb-3">
+                        <div className="card-body">
+                          <h5 className="card-title">Hi I am {name} !</h5>
+                          <p className="card-text">{description}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 no-lpadding">
+                      <div className="card text-white bg-secondary mb-3">
+                        <div className="card-body">
+                          <h5 className="card-title">About {name}</h5>
+                          <p>Age : {age} months old</p>
+                          <p>Gender : {gender}</p>
+                          <p>Breed : {slug}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 no-rpadding">
+                      <div className="card text-white bg-secondary mb-3">
+                        <div className="card-body">
+                          <h5 className="card-title">About {name}'s Owner</h5>
+                          <p>Name: {uname}</p>
+                          <p>Email: {email}</p>
+                          <p>Telephone: {phno}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 </div> 
         {/* <Link to="/rooms" className="btn-primary">
               Contact
             </Link> */}
