@@ -9,8 +9,9 @@
     "react-icons": "^3.6.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
-    "styled-components": "^4.2.0",
-    "reactjs-popup": "1.4.1"
+    "react-slick": "^0.25.2",
+    "reactjs-popup": "1.4.1",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

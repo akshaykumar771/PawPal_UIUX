@@ -15,7 +15,7 @@ export default function PetFilter({ pets }) {
   
    } = context;
   // // get unique types
-  let genders = getUnique(pets, "type");
+  let genders = getUnique(pets, "gender");
   // add all
   genders = ["all", ...genders];
 

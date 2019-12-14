@@ -6,6 +6,7 @@ import StyledHero from "../components/StyledHero";
 import defaultBcg from "../images/room-1.jpeg";
 import Popup from "reactjs-popup";
 import MyForm from "../components/Form.js";
+import Carousel from "../components/Carousel";
 import "../components/styles.css";
 
 
@@ -47,6 +48,7 @@ export default class SinglePet extends Component {
         return (
             <div>
                 {/* <SideNav /> */}
+                
                 <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero>
                 <section className="single-room">
           <div className="single-room-images">

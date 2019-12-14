@@ -87,12 +87,11 @@ class PetsProvider extends Component {
     return petType;
   }
   handleChange = event => {
-    const target = event.target;
     //const value = target.type === "checkbox" ? target.checked : target.value;
-    const gender = event.target.gender;
+    const type = event.target.type;
     const value = event.target.value;
-    const name = event.targget.name;
-    console.log(`this is ${gender}, this is value ${name}`);
+    const name = event.target.name;
+    console.log(`this is ${name}, this is value ${value}, this is ${type}`);
 
     // this.setState(
     //   {
