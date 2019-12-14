@@ -1,5 +1,5 @@
 import React from "react";
-import PetFilter from "./PetFilter";
+import PetFilter from "./Petfilter";
 import PetList from "./PetList";
 import { withPetsConsumer, PetsConsumer } from "../context";
 import Loading from "./Loading";
