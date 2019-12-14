@@ -4,6 +4,29 @@ import { PetContext } from "../context";
 import Title from "./Title";
 
 // get all unique values
+<<<<<<< HEAD:pawpal/src/components/Petfilter.js
+// const getUnique = (items, value) => {
+//   return [...new Set(items.map(item => item[value]))];
+// };
+export default function PetFilter({ rooms }) {
+  // const context = useContext(RoomContext);
+  // const {
+  //   handleChange,
+  //   type,
+  //   capacity,
+  //   price,
+  //   minPrice,
+  //   maxPrice,
+  //   minSize,
+  //   maxSize,
+  //   breakfast,
+  //   pets
+  // } = context;
+  // // get unique types
+  // let types = getUnique(rooms, "type");
+  // // add all
+  // types = ["all", ...types];
+=======
 const getUnique = (items, value) => {
   
    return [...new Set(items.map(item => item[value]))];
@@ -19,6 +42,7 @@ export default function PetFilter({ pets }) {
   let genders = getUnique(pets, "gender");
   // add all
  genders = ["all", ...genders];
+>>>>>>> d9c9496484370c4455f2b29ce7bcb65a3d04aa6f:pawpal/src/components/DogFilter.js
 
   // // map to jsx
   genders = genders.map((item, index) => {
