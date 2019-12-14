@@ -7,17 +7,17 @@ import Title from "./Title";
 const getUnique = (items, value) => {
   return [...new Set(items.map(item => item[value]))];
 };
-export default function PetFilter({ rooms }) {
-   const context = useContext(RoomContext);
+export default function PetFilter({ pets }) {
+   const context = useContext(PetContext);
    const {
      handleChange,
      gender,
   
    } = context;
   // // get unique types
-  let types = getUnique(rooms, "type");
+  let genders = getUnique(pets, "type");
   // add all
-  types = ["all", ...types];
+  genders = ["all", ...genders];
 
   // // map to jsx
   genders = genders.map((item, index) => {
