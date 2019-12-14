@@ -4,6 +4,11 @@ import { PetContext } from "../context";
 import { Link } from "react-router-dom";
 import StyledHero from "../components/StyledHero";
 import defaultBcg from "../images/room-1.jpeg";
+import Popup from "reactjs-popup";
+import MyForm from "../components/Form.js";
+import "../components/styles.css";
+
+
 export default class SinglePet extends Component {
     constructor(props) {
         super(props);
@@ -66,9 +71,12 @@ export default class SinglePet extends Component {
             </article>
           </div>
         </section> 
-        <Link to="/rooms" className="btn-primary">
+        {/* <Link to="/rooms" className="btn-primary">
               Contact
-            </Link>
+            </Link> */}
+            <Popup modal trigger={<button className="btn-primary"> Contact </button>}>
+              <MyForm />
+            </Popup>
             </div>
         )
     }

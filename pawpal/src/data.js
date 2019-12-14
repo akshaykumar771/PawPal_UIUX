@@ -38,25 +38,23 @@ import img1101 from "./images/image11.jpg";
 //import img12 from "./images/image12.jpeg";
 
 export default [
-  {
-    sys: {
-      id: "1"
-    },
-    fields: {
-      name: "Tom",
-      slug: "Husky",
-      type: "Dog",
-      age: 18,
-      gender: "Male",
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamCatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      images: [  {fields: { file: { url: img1  }  } },{fields: { file: { url: img101  }  } },{fields: { file: { url: img102  }  } }  ]
-    },
-      email: "bWayne@gmail.com",
-      phno:  1234567890 ,
-      uname: "Bruce Wayne"
+  {sys: {
+    id: "1"
   },
+  fields: {
+    name: "Tom",
+    slug: "Husky",
+    type: "Dog",
+    age: 18,
+    gender: "Male",
+    featured: false,
+    description:
+      "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamCatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+    images: [  {fields: { file: { url: img1  }  } },{fields: { file: { url: img101  }  } },{fields: { file: { url: img102  }  } }  ],
+    email: "bWayne@gmail.com",
+    phno:  1234567890 ,
+    uname: "Bruce Wayne"
+}},
   {
     sys: {
       id: "2"
@@ -71,12 +69,11 @@ export default [
       featured: false,
       description:
         "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamCatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      images: [  {fields: { file: { url: img2  }  } },{fields: { file: { url: img201  }  } },{fields: { file: { url: img202 }  } }  ]
-    },
+      images: [  {fields: { file: { url: img2  }  } },{fields: { file: { url: img201  }  } },{fields: { file: { url: img202 }  } }  ],
       email: "nFury@gmail.com",
       phno:  1234567890 ,
       uname: "Nick Fury"
-  },
+   }},
   {
     sys: {
       id: "3"
@@ -200,7 +197,7 @@ export default [
       type: "Cat",
       age: 24,
       gender: "Male",
-      featured: false,
+      featured: true,
       description:
         "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamCatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
       images: [  {fields: { file: { url: img6  }  } },{fields: { file: { url: img601  }  } },{fields: { file: { url: img602 }  } }  ],
