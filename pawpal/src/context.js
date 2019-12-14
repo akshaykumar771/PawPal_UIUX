@@ -87,14 +87,13 @@ class PetsProvider extends Component {
     return petType;
   }
   handleChange = event => {
-    // const target = event.target;
-    // //const value = target.type === "checkbox" ? target.checked : target.value;
-    // const gender = event.target.gender;
-    // const value = event.target.value;
-    // const name = event.target.name;
-    // console.log(target, gender, value, name);
-    const test = "akshay";
-    console.log(test);
+    const target = event.target;
+    //const value = target.type === "checkbox" ? target.checked : target.value;
+    const gender = event.target.gender;
+    const value = event.target.value;
+    const name = event.targget.name;
+    console.log(`this is ${gender}, this is value ${name}`);
+
     // this.setState(
     //   {
     //     [gender]: value
@@ -155,8 +154,8 @@ class PetsProvider extends Component {
        value={{
          ...this.state,
            getPet: this.getPet,
-           getPetType: this.getPetType
-//           handleChange: this.handleChange
+           getPetType: this.getPetType,
+           handleChange: this.handleChange
          }}
        >
          {this.props.children}

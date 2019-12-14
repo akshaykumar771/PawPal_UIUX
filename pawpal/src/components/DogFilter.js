@@ -23,7 +23,7 @@ export default function PetFilter({ pets }) {
   // // map to jsx
   genders = genders.map((item, index) => {
     return (
-      <option value={item} key={index}>
+      <option value={item} key={index} >
         {item}
       </option>
     );
@@ -36,6 +36,7 @@ export default function PetFilter({ pets }) {
   //     </option>
   //   );
   // });
+
    return (
      
         <section className="filter-container">
@@ -45,9 +46,9 @@ export default function PetFilter({ pets }) {
         <div className="form-group">
           <label htmlFor="gender">select gender</label>
           <select
-            gender="gender"
+            name="gender"
             id="gender"
-            value={gender}
+            //value={gender}
             className="form-control"
             onChange={handleChange}
           >

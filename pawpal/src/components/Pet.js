@@ -11,7 +11,7 @@ export default function Pet({ pet}) {
     return (
         <article className="room">
         <div className="img-container">
-            {}
+            
              <img src={images[0]} alt="single pet" />
             <Link to={`/pets/${slug}`} className="btn-primary room-link">
            Details
