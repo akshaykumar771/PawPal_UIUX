@@ -24,10 +24,12 @@ export default function Card({ pet }) {
             <div className="card">
             
                 <div className="card-body">
+                <div className="img-container">
                     <img className ="card-img-top" src={catImg} alt="Avatar" />
-                    <Link to={`/choosepets`} className="btn-primary room-link">
+                    <Link to={`/choosepets/Cats`} className="btn-primary room-link">
            Details
         </Link>
+        </div>
                 </div>
             </div>
         </div>
@@ -35,9 +37,9 @@ export default function Card({ pet }) {
         </>
     );
 }
-// Card.propTypes = {
-//     pet: PropTypes.shape({
-//       type: PropTypes.string.isRequired,
-//       images: PropTypes.arrayOf(PropTypes.string).isRequired,
-//     })
-//   }
+ Card.propTypes = {
+     pet: PropTypes.shape({
+       type: PropTypes.string.isRequired,
+       images: PropTypes.arrayOf(PropTypes.string).isRequired,
+     })
+   }

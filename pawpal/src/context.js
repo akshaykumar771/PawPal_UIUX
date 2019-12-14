@@ -14,6 +14,8 @@ class PetsProvider extends Component {
     capacity: 1,
     gender: "all",
     breakfast: false,
+    typeDog: [],
+    typeCat: [],
   };
   // getData
   // getData = async () => {

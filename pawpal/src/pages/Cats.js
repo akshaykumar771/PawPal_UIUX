@@ -9,20 +9,20 @@ import Loading from "../components/Loading";
     export default class NewPets extends Component {
       static contextType = PetContext;
       render() {
-        let { loading, typeDog: pets } = this.context;
+        let { loading, typeCat: pets } = this.context;
         pets = pets.map(pet => {
           return <Pet key={pet.id} pet={pet} />;
         });
     
         return (
-            <>
-            <SideNav />
-          <section className="new-pets">
-            <div className="featured-rooms-center">
-            {loading ? <Loading /> : pets}
-            </div>
-          </section>
-          </ >
+          <>
+          <SideNav />
+        <section className="new-pets">
+          <div className="featured-rooms-center">
+          {loading ? <Loading /> : pets}
+          </div>
+        </section>
+        </ >
         );
       }
     }
