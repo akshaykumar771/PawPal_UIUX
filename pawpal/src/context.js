@@ -48,8 +48,7 @@ class PetsProvider extends Component {
     let newPets = pets.filter(pet => pet.featured === true);
     let typeDog = pets.filter(pet => pet.type === "Dog");
     let typeCat = pets.filter(pet => pet.type === "Cat");
-    //let maxPrice = Math.max(...rooms.map(item => item.price));
-    //let maxSize = Math.max(...rooms.map(item => item.size));
+    
     this.setState({
       pets, 
       newPets,
