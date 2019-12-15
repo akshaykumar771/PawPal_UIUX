@@ -8,9 +8,9 @@ import PetContainer from "../components/PetContainer";
 
     export default class NewPets extends Component {
       static contextType = PetContext; //refreshState
-      componentWillUnmount() {
-        window.location.reload();
-      }
+       componentWillUnmount() {
+         window.location.reload();
+       }
       render() {
         let { loading, typeCat: pets } = this.context;
         pets = pets.map(pet => {
