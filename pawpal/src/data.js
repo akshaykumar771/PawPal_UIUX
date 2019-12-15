@@ -50,7 +50,7 @@ export default [
     featured: false,
     description:
       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamCatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-    images: [  {fields: { file: { url: img1  }  } },{fields: { file: { url: img101  }  } },{fields: { file: { url: img102  }  } }  ],
+    images: [  {fields: { file: { url: img1  }  } },{fields: { file: { url: img201  }  } },{fields: { file: { url: img302  }  } }  ],
     email: "bWayne@gmail.com",
     phno:  1234567890 ,
     uname: "Bruce Wayne"

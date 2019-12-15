@@ -6,7 +6,7 @@ import StyledHero from "../components/StyledHero";
 import defaultBcg from "../images/room-1.jpeg";
 import Popup from "reactjs-popup";
 import MyForm from "../components/Form.js";
-import Carousel from "../components/Carousel";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from 'mdbreact';
 import "../components/styles.css";
 
 
@@ -47,32 +47,44 @@ export default class SinglePet extends Component {
           const [mainImg, ...defaultImg] = images;
         return (
             <div>
-                <SideNav />
-                <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero>
-                <div className="col-md-9 offset-3">
+                {/* <SideNav /> */}
+                {/* <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero> */}
+                <div>
                   {/* <div className="single-room-images">
                     {defaultImg.map((item, index) => {
                       return <img key={index} src={item} alt={name} />;
                     })}
                   </div> */}
-                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                   {defaultImg.map((item, index) => { 
-                     return <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img key={index} class="d-block w-100" src={item} alt={name} />
-                      </div>
-                    </div>
-                    })}
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                  <div>
+                   
+                     <MDBContainer className=" mt-4">
+                     {defaultImg.map((item, index) => {
+                      return(
+                       <MDBCarousel activeItem={1} length={2} showControls={true} showIndicators={false} className="z-depth-1">
+                     
+                        <MDBCarouselInner>
+          <MDBCarouselItem>
+            <MDBView>
+            
+               <img key={index} class="d-block w-100" src={item} alt={name} />
+           
+            </MDBView>
+          </MDBCarouselItem>
+        </MDBCarouselInner>
+      </MDBCarousel> 
+                     )})}
+      </MDBContainer>
+                    )}
+                    {/* <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
-                    </a>
+                    </a> */}
                   </div>
-                  <div className="row col-md-12 no-rpadding">
+                  {/* <div className="row col-md-12 no-rpadding">
                     <div className="desc">
                       <div className="card text-white bg-secondary mb-3">
                         <div className="card-body">
@@ -101,7 +113,7 @@ export default class SinglePet extends Component {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                  </div> 
         {/* <Link to="/rooms" className="btn-primary">
               Contact
