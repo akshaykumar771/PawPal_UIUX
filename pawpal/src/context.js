@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-//import items from "./data";
-import Client from "./Contentful";
+import items from "./data";
+//import Client from "./Contentful";
 
 const PetContext = React.createContext();
 
@@ -20,63 +20,62 @@ class PetsProvider extends Component {
     typeCat: [],
   };
   //------------------contentful----------
-    getData = async () => {
-      try {
-        let response = await Client.getEntries({
-          content_type: "pawpal1",
-          // order: "sys.createdAt"
-          order: "-fields.age"
-        });
-      console.log(response.items);
-      let pets = this.formatData(response.items);
-      let newPets = pets.filter(pet => pet.featured === true);
-      let typeDog = pets.filter(pet => pet.type === "Dog");
-      let typeCat = pets.filter(pet => pet.type === "Cat");
-      let maxAge = Math.max(...pets.map(item => item.age));
-      let minAge = Math.min(...pets.map(item => item.age));
+    // getData = async () => {
+    //   try {
+    //     let response = await Client.getEntries({
+    //       content_type: "pawpal1",
+    //       // order: "sys.createdAt"
+    //       order: "-fields.age"
+    //     });
+    //   console.log(response.items);
+    //   let pets = this.formatData(response.items);
+    //   let newPets = pets.filter(pet => pet.featured === true);
+    //   let typeDog = pets.filter(pet => pet.type === "Dog");
+    //   let typeCat = pets.filter(pet => pet.type === "Cat");
+    //   let maxAge = Math.max(...pets.map(item => item.age));
+    //   let minAge = Math.min(...pets.map(item => item.age));
 
-      this.setState({
-        pets, 
-        newPets,
-        typeDog,
-        typeCat,
-        sortedPets: pets,
-        loading: false,
-        age: maxAge,
-        maxAge,
-        minAge,
-      });
-      } catch (error) {
-        console.log(error);
-      }
-    };
+    //   this.setState({
+    //     pets, 
+    //     newPets,
+    //     typeDog,
+    //     typeCat,
+    //     sortedPets: pets,
+    //     loading: false,
+    //     age: maxAge,
+    //     maxAge,
+    //     minAge,
+    //   });
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // };
 
-    componentDidMount() {
-      this.getData();
-    }
+    // componentDidMount() {
+    //   this.getData();
+    // }
   //------------------End of contentful----------
 
   //----------------Local Data------------------
-  //  componentDidMount() {
-  //     let pets  = this.formatData(items);
-  //     let newPets = pets.filter(pet => pet.featured === true);
-  //     let typeDog = pets.filter(pet => pet.type === "Dog");
-  //     let typeCat = pets.filter(pet => pet.type === "Cat");
-  //     let maxAge = Math.max(...pets.map(item => item.age));
-  //     let minAge = Math.min(...pets.map(item => item.age));
-
-  //     this.setState({
-  //       pets, 
-  //       newPets,
-  //       typeDog,
-  //       typeCat,
-  //       sortedPets: pets,
-  //       loading: false,
-  //       age: maxAge,
-  //       maxAge,
-  //       minAge,
-  //     });
-  //   }
+    componentDidMount() {
+       let pets  = this.formatData(items);
+       let newPets = pets.filter(pet => pet.featured === true);
+       let typeDog = pets.filter(pet => pet.type === "Dog");
+       let typeCat = pets.filter(pet => pet.type === "Cat");
+       let maxAge = Math.max(...pets.map(item => item.age));
+       let minAge = Math.min(...pets.map(item => item.age));
+     this.setState({
+         pets, 
+         newPets,
+         typeDog,
+         typeCat,
+         sortedPets: pets,
+         loading: false,
+         age: maxAge,
+         maxAge,
+         minAge,
+       });
+     }
 //----------------End of Local Data------------------
 
   formatData(items) {
