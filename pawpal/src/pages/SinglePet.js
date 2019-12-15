@@ -62,14 +62,7 @@ export default class SinglePet extends Component {
                     )}
                   </Slider>
                   </div>
-<<<<<<< HEAD
                   <div className="row col-md-12 no-rpadding">
-=======
-                  <div>
-                    )}
-                  </div>
-                  <div className="row col-md-9 offset-3 no-rpadding">
->>>>>>> eac3be2505c6a080b41e2d69e0883782438214c1
                     <div className="desc">
                       <div className="card text-white bg-secondary mb-3">
                         <div className="card-body">
