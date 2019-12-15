@@ -97,17 +97,14 @@ export default class SinglePet extends Component {
                           <p>Name: {uname}</p>
                           <p>Email: {email}</p>
                           <p>Telephone: {phno}</p>
+                          <Popup modal trigger={<button className="btn-primary"> Contact Owner</button>}>
+                            <MyForm />
+                          </Popup>
                         </div>
                       </div>
                     </div>
                   </div>
-                 </div> 
-        {/* <Link to="/rooms" className="btn-primary">
-              Contact
-            </Link> */}
-            <Popup modal trigger={<button className="btn-primary"> Contact </button>}>
-              <MyForm />
-            </Popup>
+                </div> 
             </div>
         )
     }

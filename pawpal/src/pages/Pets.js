@@ -19,11 +19,11 @@ import PetContainer from "../components/PetContainer";
     
         return (
             <>
-            {/* <SideNav /> */}
+            <SideNav />
             <PetContainer /> 
             {/* //<DogFilter pets={pets}/> */}
           <section className="new-pets">
-            <div className="featured-rooms-center">
+            <div className="col-md-9 offset-3 row ">
             {loading ? <Loading /> : pets}
             </div>
           </section>

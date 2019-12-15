@@ -18,7 +18,7 @@ import Loading from "../components/Loading";
           <>
           <SideNav />
         <section className="new-pets">
-          <div className="featured-rooms-center">
+          <div className="row col-md-9 offset-3">
           {loading ? <Loading /> : pets}
           </div>
         </section>

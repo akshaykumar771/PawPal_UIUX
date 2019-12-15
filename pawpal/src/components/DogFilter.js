@@ -38,7 +38,7 @@ export default function PetFilter({ pets }) {
 
    return (
      
-        <section className="filter-container">
+    <section className="col-md-9 offset-3 padding-tb">
       <Title title="search dogs" />
       <form className="filter-form">
         {/*select type  */}

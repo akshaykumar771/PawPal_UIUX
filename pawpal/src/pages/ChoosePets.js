@@ -11,7 +11,6 @@ export default class ChoosePets extends Component {
       <div>
       <Card />
       </div>
-      
     );
   }
 

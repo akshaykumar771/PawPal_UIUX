@@ -91,7 +91,7 @@ class PetsProvider extends Component {
     //const value = target.type === "checkbox" ? target.checked : target.value;
     const gender = event.target.gender;
     const value = event.target.value;
-    const name = event.targget.name;
+    const name = event.target.name;
     console.log(`this is ${gender}, this is value ${name}`);
 
     // this.setState(
