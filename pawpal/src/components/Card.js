@@ -8,7 +8,7 @@ export default function Card({ pet }) {
     //const {type,images} = pet;
     return (
         <>
-        <SideNav />
+        {/* <SideNav /> */}
         <div className = "main_card">
             <div className="card">
                 <div className="card-body">

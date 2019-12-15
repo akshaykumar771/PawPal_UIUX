@@ -5,6 +5,8 @@ import catImg from "../images/Cat_choose_1.png";
 import Pet from "../components/Pet";
 import { PetContext } from "../context";
 import Loading from "../components/Loading";
+import PetContainer from "../components/PetContainer";
+
 
     export default class NewPets extends Component {
       static contextType = PetContext;
@@ -16,7 +18,8 @@ import Loading from "../components/Loading";
     
         return (
           <>
-          <SideNav />
+          <PetContainer /> 
+          
         <section className="new-pets">
           <div className="row col-md-9 offset-3">
           {loading ? <Loading /> : pets}
