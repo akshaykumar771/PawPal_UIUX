@@ -14,7 +14,7 @@ export default class SinglePet extends Component {
     constructor(props) {
         super(props);
          this.state = {
-           slug: this.props.match.params.slug,
+           id: this.props.match.params.id,
            defaultBcg,
            images: []
          };
@@ -27,7 +27,7 @@ export default class SinglePet extends Component {
         centerMode: true
       };
         const { getPet } = this.context;
-        const pet = getPet(this.state.slug);
+        const pet = getPet(this.state.id);
         if (!pet) {
             return (
               <div className="error">
@@ -52,7 +52,7 @@ export default class SinglePet extends Component {
           //const [mainImg, ...defaultImg] = images;
         return (
             <div className="col-md-12">
-                <SideNav />
+                {/* <SideNav /> */}
                   <div className = "col-md-9 offset-3 container pet-carousel">
                   <Slider {...settings}>
                     {images.map((image, index) =>

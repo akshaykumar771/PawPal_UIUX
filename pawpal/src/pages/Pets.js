@@ -4,7 +4,6 @@ import Pet from "../components/Pet";
 import { PetContext } from "../context";
 import Loading from "../components/Loading";
 import PetContainer from "../components/PetContainer";
-import { browserHistory } from 'react-router';
 
     export default class NewPets extends Component {
       static contextType = PetContext;

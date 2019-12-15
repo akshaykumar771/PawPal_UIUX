@@ -42,6 +42,7 @@ export default [
     id: "1"
   },
   fields: {
+    id: 1,
     name: "Tom",
     slug: "Husky",
     type: "Dog",
@@ -59,7 +60,27 @@ export default [
       id: "2"
     },
     fields: {
+      id: 2,
       name: "Jack",
+      slug: "Golden Retriever",
+      type: "Dog",
+      price: 150,
+      age: 3,
+      gender: "Female",
+      featured: false,
+      description:
+        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamCatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
+      images: [  {fields: { file: { url: img2  }  } },{fields: { file: { url: img201  }  } },{fields: { file: { url: img202 }  } }  ],
+      city: "Hamburg",
+      uname: "Nick Fury"
+   }},
+   {
+    sys: {
+      id: "12"
+    },
+    fields: {
+      id: 3,
+      name: "Jack2",
       slug: "Golden Retriever",
       type: "Dog",
       price: 150,
@@ -77,6 +98,7 @@ export default [
       id: "3"
     },
     fields: {
+      id: 3,
       name: "Harry",
       slug: "Pug",
       type: "Dog",
@@ -94,6 +116,7 @@ export default [
       id: "4"
     },
     fields: {
+      id: 4,
       name: "Jack",
       slug: "German Shephard",
       type: "Dog",
@@ -112,6 +135,7 @@ export default [
       id: "5"
     },
     fields: {
+      id: 5,
       name: "Spike",
       slug: "Shih Tzu",
       type: "Dog",
@@ -130,6 +154,7 @@ export default [
       id: "7"
     },
     fields: {
+      id: 7,
       name: "Jim",
       slug: "Chartreux",
       type: "Cat",
@@ -148,6 +173,7 @@ export default [
       id: "8"
     },
     fields: {
+      id: 8,
       name: "Jam",
       slug: "Savannah",
       type: "Cat",
@@ -166,6 +192,7 @@ export default [
       id: "9"
     },
     fields: {
+      id: 9,
       name: "Billy",
       slug: "Bengal",
       type: "Cat",
@@ -184,6 +211,7 @@ export default [
       id: "10"
     },
     fields: {
+      id: 10,
       name: "Jerry",
       slug: "Persian",
       type: "Cat",
@@ -202,6 +230,7 @@ export default [
       id: "11"
     },
     fields: {
+      id: 11,
       name: "Donald",
       slug: "Siamese",
       type: "Cat",
@@ -220,6 +249,7 @@ export default [
       id: "12"
     },
     fields: {
+      id: 12,
       name: "Bugs",
       slug: "Munchkin",
       type: "Cat",

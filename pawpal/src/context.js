@@ -49,9 +49,9 @@ class PetsProvider extends Component {
     });
     return tempItems;
   }
-  getPet = slug => {
+  getPet = id => {
     let tempPets = [...this.state.pets];
-    const pet = tempPets.find(pet => pet.slug === slug);
+    const pet = tempPets.find(pet => pet.id === id);
     return pet;
   };
   getPetType = type => {

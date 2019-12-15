@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 export default function Pet({ pet}) {
-    const { name, slug, images, description } = pet;
+    const { name, id, images, description } = pet;
     return (
         <div className="col-md-4">
             <div className="card">
@@ -11,7 +11,7 @@ export default function Pet({ pet}) {
                 <div className="card-body body-pet">
                 <h4>{name}</h4>
                 <p className="overflow-text">{description}</p>
-                <Link to={`/pets/${slug}`} className="rounded-btn">
+                <Link to={`/pets/${id}`} className="rounded-btn">
                     <p className="card-title">More info</p>
                 </Link>
                 </div>
@@ -24,7 +24,7 @@ export default function Pet({ pet}) {
 Pet.propTypes = {
       pet: PropTypes.shape({
         name: PropTypes.string.isRequired,
-        slug: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired,
         images: PropTypes.arrayOf(PropTypes.string).isRequired,
         description: PropTypes.string.isRequired,
       })
