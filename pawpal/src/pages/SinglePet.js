@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import SideNav from '../components/SideNav';
 import { PetContext } from "../context";
 import { Link } from "react-router-dom";
-import StyledHero from "../components/StyledHero";
 import defaultBcg from "../images/room-1.jpeg";
 import Popup from "reactjs-popup";
 import MyForm from "../components/Form.js";
@@ -14,9 +13,8 @@ import "slick-carousel/slick/slick-theme.css";
 export default class SinglePet extends Component {
     constructor(props) {
         super(props);
-        //console.log(this.props);
          this.state = {
-           slug: this.props.match.params.slug,
+           id: this.props.match.params.id,
            defaultBcg,
            images: []
          };
@@ -29,7 +27,7 @@ export default class SinglePet extends Component {
         centerMode: true
       };
         const { getPet } = this.context;
-        const pet = getPet(this.state.slug);
+        const pet = getPet(this.state.id);
         if (!pet) {
             return (
               <div className="error">
@@ -46,16 +44,15 @@ export default class SinglePet extends Component {
             age,
             gender,
             slug,
-            email,
-            phno,
             uname,
+            city,
             images
           } = pet;
-          console.log(images)
+          // console.log(images)
           //const [mainImg, ...defaultImg] = images;
         return (
             <div className="col-md-12">
-                <SideNav />
+                {/* <SideNav /> */}
                   <div className = "col-md-9 offset-3 container pet-carousel">
                   <Slider {...settings}>
                     {images.map((image, index) =>
@@ -65,10 +62,7 @@ export default class SinglePet extends Component {
                     )}
                   </Slider>
                   </div>
-                  <div>
-                    )}
-                  </div>
-                  <div className="row col-md-9 offset-3 no-rpadding">
+                  <div className="row col-md-12 no-rpadding">
                     <div className="desc">
                       <div className="card text-white bg-secondary mb-3">
                         <div className="card-body">
@@ -92,20 +86,17 @@ export default class SinglePet extends Component {
                         <div className="card-body">
                           <h5 className="card-title">About {name}'s Owner</h5>
                           <p>Name: {uname}</p>
-                          <p>Email: {email}</p>
-                          <p>Telephone: {phno}</p>
+                          <p>City: {city}</p>
                           <Popup modal trigger={<button className="btn-primary"> Contact Owner</button>}>
                             <MyForm />
                           </Popup>
                         </div>
                       </div>
                     </div>
-                  </div>
-                 
-      
-            <Popup modal trigger={<button className="btn-primary"> Contact </button>}>
+                  </div>      
+            {/* <Popup modal trigger={<button className="btn-primary"> Contact </button>}>
               <MyForm />
-            </Popup>
+            </Popup> */}
             </div>
         )
     }

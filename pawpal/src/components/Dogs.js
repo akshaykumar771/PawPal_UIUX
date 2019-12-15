@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { PetContext } from "../context";
-import PetList from "./PetList"
 export default class Dogs extends Component {
     constructor(props) {
         super(props);

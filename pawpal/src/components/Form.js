@@ -18,18 +18,21 @@ export default class MyForm extends React.Component {
         <div className="content">
         <form
         onSubmit={this.submitForm}
-        // action="https://formspree.io/xoqvroan"
+        action="https://formspree.io/xoqvroan"
         method="POST"
       >
-        <label className="header">Contact Form</label><br /><br />
-        <label className="form">Full name:</label>
-        <input className="formText" type="text" name="name" required/>
-        <input type = "hidden" name="email" value="nithinbs18@gmail.com" readonly/>
-        <label className="form">Message:</label>
-        <input type="text" className="formText" name="message" required/>
-        <label className="form">Phone number:</label>
-        <input type="text" className="formText" name="phone" required/>
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button className="formsubmit" type="submit">Submit</button>}
+        {status === "SUCCESS" ? <p class="formSubmission">Thanks for submission!</p> : <label className="formSubmission">Contact Form: </label>}
+        <br /><br />
+        {status === "SUCCESS" ? <div /> : <label className="form">Full name:</label>}
+        {status === "SUCCESS" ? <div /> : <input className="formText" type="text" name="name" required/>}
+        {status === "SUCCESS" ? <div /> : <label className="form">Email:</label>}
+        {status === "SUCCESS" ? <div /> : <input type="email" className="formText" name="userEmail" required/>}
+        {status === "SUCCESS" ? <div /> : <input type = "hidden" name="email" value="nithinbs18@gmail.com" readOnly/>}
+        {status === "SUCCESS" ? <div /> : <label className="form">Phone number:</label>}
+        {status === "SUCCESS" ? <div /> : <input type="number" className="formText" name="phone" required/> }
+        {status === "SUCCESS" ? <div /> : <label className="form">Message:</label>}
+        {status === "SUCCESS" ? <div /> : <textarea className="formTextarea" name="Message"></textarea>}
+        {status === "SUCCESS" ? <div /> : <button className="formsubmit" type="submit">Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
         </div>
