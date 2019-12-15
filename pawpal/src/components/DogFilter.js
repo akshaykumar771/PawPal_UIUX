@@ -11,7 +11,7 @@ export default function PetFilter({ pets }) {
    const context = useContext(PetContext);
    const {
      handleChange,
-     gender,
+    //  gender,
      age,
      maxAge,
      minAge,
