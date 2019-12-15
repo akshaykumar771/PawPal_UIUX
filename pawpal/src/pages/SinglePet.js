@@ -52,7 +52,7 @@ export default class SinglePet extends Component {
           //const [mainImg, ...defaultImg] = images;
         return (
             <div className="col-md-12">
-                {/* <SideNav /> */}
+                <SideNav />
                   <div className = "col-md-9 offset-3 container pet-carousel">
                   <Slider {...settings}>
                     {images.map((image, index) =>
@@ -62,7 +62,10 @@ export default class SinglePet extends Component {
                     )}
                   </Slider>
                   </div>
-                  <div className="row col-md-12 no-rpadding">
+                  <div>
+                    )}
+                  </div>
+                  <div className="row col-md-9 offset-3 no-rpadding">
                     <div className="desc">
                       <div className="card text-white bg-secondary mb-3">
                         <div className="card-body">
