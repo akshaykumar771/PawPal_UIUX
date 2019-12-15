@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FaPaw } from "react-icons/fa"
 import Services from "../components/Services";
 import NewPets from "../components/NewPets";
+import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function Home() {
       </Hero>
       <Services />
       <NewPets />
+      <Footer />
     </>
   );
 }

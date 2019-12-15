@@ -26,10 +26,10 @@ export default function PetFilter({ pets }) {
     );
   });
    return (
-        <section className="col-md-9 offset-3 padding-tb">
+      <section className="col-md-9 offset-3 padding-tb">
       <Title title="Filter" />
-      <form className="filter-form">
-        <div className="form-group">
+      <form className="row filter-form">
+        <div className="col-md-6 form-group">
           <label htmlFor="gender">select gender</label>
           <select
             name="gender"
@@ -37,12 +37,12 @@ export default function PetFilter({ pets }) {
             className="form-control"
             onChange={handleChange}
           >
-            <option value="all">all</option>
+            <option value="all">All</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
         </div>
-        <div className="form-group">
+        <div className="col-md-6 form-group">
         <label htmlFor="price">{age} Months old</label>
         <input
           type="range"

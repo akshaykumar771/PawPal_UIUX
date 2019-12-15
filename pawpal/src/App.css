@@ -120,74 +120,6 @@
     letter-spacing: var(--mainSpacing);
   }
   /* end of globals */
-  /* Navbar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.75rem 2rem;
-    background: var(--offWhite);
-    z-index: 1;
-  }
-  .nav-header {
-    display: flex;
-    justify-content: space-between;
-  }
-  .nav-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
-  .nav-icon {
-    font-size: 1.5rem;
-    color: var(--primaryColor);
-  }
-  .nav-links {
-    height: 0;
-    overflow: hidden;
-    transition: var(--mainTransition);
-    list-style-type: none;
-  }
-  .nav-links a {
-    display: block;
-    text-decoration: none;
-    padding: 1rem 0;
-    color: var(--mainBlack);
-    transition: var(--mainTransition);
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: var(--mainSpacing);
-  }
-  .nav-links a:hover {
-    color: var(--primaryColor);
-  }
-  
-  .show-nav {
-    height: 100px;
-  }
-  @media screen and (min-width: 768px) {
-    .nav-btn {
-      display: none;
-    }
-    .nav-center {
-      max-width: 1170px;
-      margin: 0 auto;
-      display: flex;
-    }
-    .nav-links {
-      height: auto;
-      display: flex;
-      margin-left: 4rem;
-    }
-    .nav-links a {
-      margin: 0 1rem;
-      padding: 0.5rem 0;
-    }
-  }
-  /* end of navbar */
   
   /* The sidebar menu */
   .sidenav {
@@ -206,20 +138,35 @@
     display: block;
     text-align: center;
   }
-  
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
+
+.footer {
+  padding: 0;
+}
+
+.footer-1 {
+  padding: 20px 0px 5px 0px;
+}
+
+.footer-2 {
+    background: #545871;
+    color: white;
+    padding: 30px 20px 20px 10px;
+}
+
+  .links, .logo, .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+  padding-top: 25px;
+}
+
+.links > a, .social > h2 {
+    padding: 0 30px;
+    color: black;
+}
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
@@ -387,6 +334,7 @@
 
   .new-pets {
     padding: 2rem 0;
+    background: #ecebea;
   }
   
   .services {

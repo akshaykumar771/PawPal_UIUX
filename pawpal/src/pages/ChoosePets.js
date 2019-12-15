@@ -5,7 +5,6 @@ export default class ChoosePets extends Component {
   render(){
     return (
       <div>
-        <SideNav />
       <Card />
       </div>
     );
