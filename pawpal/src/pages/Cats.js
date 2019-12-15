@@ -19,7 +19,7 @@ import PetContainer from "../components/PetContainer";
         return (
           <>
           <PetContainer /> 
-          
+          <SideNav />
         <section className="new-pets">
           <div className="row col-md-9 offset-3">
           {loading ? <Loading /> : pets}
