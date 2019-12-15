@@ -22,7 +22,9 @@ export default class SinglePet extends Component {
       static contextType = PetContext;
     render() {
       var settings = {
-        dots: true
+        dots: true,
+        initialSlide: 1,
+        centerMode: true
       };
         const { getPet } = this.context;
         const pet = getPet(this.state.slug);
@@ -49,16 +51,9 @@ export default class SinglePet extends Component {
           // console.log(images)
           //const [mainImg, ...defaultImg] = images;
         return (
-            <div>
-                {/* <SideNav /> */}
-                {/* <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero>
-                <div>
-                  <div className="single-room-images">
-                    {defaultImg.map((item, index) => {
-                      return <img key={index} src={item} alt={name} />;
-                    })}
-                  </div> */}
-                  <div className = "container">
+            <div className="col-md-12">
+                <SideNav />
+                  <div className = "col-md-9 offset-3 container pet-carousel">
                   <Slider {...settings}>
                     {images.map((image, index) =>
                       <div>
@@ -67,7 +62,14 @@ export default class SinglePet extends Component {
                     )}
                   </Slider>
                   </div>
+<<<<<<< HEAD
                   <div className="row col-md-12 no-rpadding">
+=======
+                  <div>
+                    )}
+                  </div>
+                  <div className="row col-md-9 offset-3 no-rpadding">
+>>>>>>> eac3be2505c6a080b41e2d69e0883782438214c1
                     <div className="desc">
                       <div className="card text-white bg-secondary mb-3">
                         <div className="card-body">
