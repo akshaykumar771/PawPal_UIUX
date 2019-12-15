@@ -39,31 +39,27 @@ class PetsProvider extends Component {
     });
   }
 
-  refreshState() {
+  refreshState = () => {
     let pets = items.map(item => {
       let id = item.sys.id;
       let images = item.fields.images.map(image => image.fields.file.url);
-
       let pet = { ...item.fields, images, id };
       return pet;
     });
-    let newPets = pets.filter(pet => pet.featured === true);
     let typeDog = pets.filter(pet => pet.type === "Dog");
     let typeCat = pets.filter(pet => pet.type === "Cat");
     let maxAge = Math.max(...pets.map(item => item.age));
     let minAge = Math.min(...pets.map(item => item.age));
     console.log("refresh data")
     // this.setState({
-    //   pets, 
-    //   newPets,
-    //   typeDog,
-    //   typeCat,
-    //   sortedPets: pets,
-    //   loading: false,
-    //   age: maxAge,
-    //   maxAge,
-    //   minAge,
-    // });
+    //     pets,
+    //     typeDog,
+    //     typeCat,
+    //     gender: "all",
+    //     age: maxAge,
+    //     maxAge,
+    //     minAge,
+    //  });
   }
 
 
