@@ -21,7 +21,5 @@ export default function SideNav({ sidenav }) {
               <MyForm />
         </Popup>
       </div>
-
-
     );
   }

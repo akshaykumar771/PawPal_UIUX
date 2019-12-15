@@ -8,17 +8,11 @@ import { browserHistory } from 'react-router';
 
     export default class NewPets extends Component {
       static contextType = PetContext;
-      componentDidMount = () =>{
-       
-      }
       componentWillUnmount() {
         window.location.reload();
       }
       render() {
-        
-      
-        let { loading,typeDog: pets, refreshState } = this.context;
-        refreshState();
+        let { loading,typeDog: pets } = this.context;
         pets = pets.map(pet => {
           return <Pet key={pet.id} pet={pet} />;
         });

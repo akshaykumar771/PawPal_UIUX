@@ -12,8 +12,7 @@ import PetContainer from "../components/PetContainer";
         window.location.reload();
       }
       render() {
-        let { loading, typeCat: pets, refreshState } = this.context;
-        refreshState();
+        let { loading, typeCat: pets } = this.context;
         pets = pets.map(pet => {
           return <Pet key={pet.id} pet={pet} />;
         });

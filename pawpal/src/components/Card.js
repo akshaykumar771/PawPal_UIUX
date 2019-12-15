@@ -1,6 +1,6 @@
 import React from "react";
-import dogImg from "../images/Dog_choose_1.png";
-import catImg from "../images/Cat_choose_1.png";
+import dogImg from "../images/Dog_Ch_1.png";
+import catImg from "../images/Cat_Ch_1.png";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import SideNav from "./SideNav"

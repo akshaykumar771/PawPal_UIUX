@@ -39,30 +39,6 @@ class PetsProvider extends Component {
     });
   }
 
-  refreshState = () => {
-    let pets = items.map(item => {
-      let id = item.sys.id;
-      let images = item.fields.images.map(image => image.fields.file.url);
-      let pet = { ...item.fields, images, id };
-      return pet;
-    });
-    let typeDog = pets.filter(pet => pet.type === "Dog");
-    let typeCat = pets.filter(pet => pet.type === "Cat");
-    let maxAge = Math.max(...pets.map(item => item.age));
-    let minAge = Math.min(...pets.map(item => item.age));
-    console.log("refresh data")
-    // this.setState({
-    //     pets,
-    //     typeDog,
-    //     typeCat,
-    //     gender: "all",
-    //     age: maxAge,
-    //     maxAge,
-    //     minAge,
-    //  });
-  }
-
-
   formatData(items) {
     let tempItems = items.map(item => {
       let id = item.sys.id;
@@ -125,8 +101,7 @@ class PetsProvider extends Component {
          ...this.state,
            getPet: this.getPet,
            getPetType: this.getPetType,
-           handleChange: this.handleChange,
-           refreshState: this.refreshState
+           handleChange: this.handleChange
          }}
        >
          {this.props.children}
