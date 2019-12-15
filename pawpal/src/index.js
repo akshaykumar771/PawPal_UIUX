@@ -5,6 +5,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { PetsProvider } from "./context";
+
+
 ReactDOM.render(
   <PetsProvider>
     <Router>

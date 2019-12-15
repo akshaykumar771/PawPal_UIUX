@@ -7,7 +7,9 @@ import defaultBcg from "../images/room-1.jpeg";
 import Popup from "reactjs-popup";
 import MyForm from "../components/Form.js";
 import "../components/styles.css";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default class SinglePet extends Component {
     constructor(props) {
@@ -15,11 +17,15 @@ export default class SinglePet extends Component {
         //console.log(this.props);
          this.state = {
            slug: this.props.match.params.slug,
-           defaultBcg
+           defaultBcg,
+           images: []
          };
       }
       static contextType = PetContext;
     render() {
+      var settings = {
+        dots: true
+      };
         const { getPet } = this.context;
         const pet = getPet(this.state.slug);
         if (!pet) {
@@ -43,33 +49,32 @@ export default class SinglePet extends Component {
             uname,
             images
           } = pet;
-          const [mainImg, ...defaultImg] = images;
+          console.log(images)
+          //const [mainImg, ...defaultImg] = images;
         return (
             <div>
-                <SideNav />
-                <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero>
-                <div className="col-md-9 offset-3">
-                  {/* <div className="single-room-images">
+                {/* <SideNav /> */}
+                {/* <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero>
+                <div>
+                  <div className="single-room-images">
                     {defaultImg.map((item, index) => {
                       return <img key={index} src={item} alt={name} />;
                     })}
                   </div> */}
-                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                   {defaultImg.map((item, index) => { 
-                     return <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img key={index} class="d-block w-100" src={item} alt={name} />
+                  <div className = "container">
+                  <Slider {...settings}>
+                    {images.map((image, index) =>
+                      <div>
+                        <img key={index} src={image} alt=""/>
                       </div>
-                    </div>
-                    })}
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
+                    )}
+                  </Slider>
+                  </div>
+                  <div>
+                 
+                     
+      
+                    )}
                   </div>
                   <div className="row col-md-12 no-rpadding">
                     <div className="desc">
@@ -104,7 +109,11 @@ export default class SinglePet extends Component {
                       </div>
                     </div>
                   </div>
-                </div> 
+                 
+      
+            <Popup modal trigger={<button className="btn-primary"> Contact </button>}>
+              <MyForm />
+            </Popup>
             </div>
         )
     }
