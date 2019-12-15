@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import SideNav from "./components/SideNav";
 import Home from "./pages/Home";
 import ChoosePets from "./pages/ChoosePets";
 import Pets from "./pages/Pets";
