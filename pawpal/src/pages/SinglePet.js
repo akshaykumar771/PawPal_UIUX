@@ -6,9 +6,10 @@ import StyledHero from "../components/StyledHero";
 import defaultBcg from "../images/room-1.jpeg";
 import Popup from "reactjs-popup";
 import MyForm from "../components/Form.js";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from 'mdbreact';
 import "../components/styles.css";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default class SinglePet extends Component {
     constructor(props) {
@@ -16,11 +17,15 @@ export default class SinglePet extends Component {
         //console.log(this.props);
          this.state = {
            slug: this.props.match.params.slug,
-           defaultBcg
+           defaultBcg,
+           images: []
          };
       }
       static contextType = PetContext;
     render() {
+      var settings = {
+        dots: true
+      };
         const { getPet } = this.context;
         const pet = getPet(this.state.slug);
         if (!pet) {
@@ -44,47 +49,34 @@ export default class SinglePet extends Component {
             uname,
             images
           } = pet;
-          const [mainImg, ...defaultImg] = images;
+          console.log(images)
+          //const [mainImg, ...defaultImg] = images;
         return (
             <div>
                 {/* <SideNav /> */}
-                {/* <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero> */}
+                {/* <StyledHero img={mainImg || this.state.defaultBcg}></StyledHero>
                 <div>
-                  {/* <div className="single-room-images">
+                  <div className="single-room-images">
                     {defaultImg.map((item, index) => {
                       return <img key={index} src={item} alt={name} />;
                     })}
                   </div> */}
-                  <div>
-                   
-                     <MDBContainer className=" mt-4">
-                     {defaultImg.map((item, index) => {
-                      return(
-                       <MDBCarousel activeItem={1} length={2} showControls={true} showIndicators={false} className="z-depth-1">
-                     
-                        <MDBCarouselInner>
-          <MDBCarouselItem>
-            <MDBView>
-            
-               <img key={index} class="d-block w-100" src={item} alt={name} />
-           
-            </MDBView>
-          </MDBCarouselItem>
-        </MDBCarouselInner>
-      </MDBCarousel> 
-                     )})}
-      </MDBContainer>
+                  <div className = "container">
+                  <Slider {...settings}>
+                    {images.map((image, index) =>
+                      <div>
+                        <img key={index} src={image} alt=""/>
+                      </div>
                     )}
-                    {/* <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a> */}
+                  </Slider>
                   </div>
-                  {/* <div className="row col-md-12 no-rpadding">
+                  <div>
+                 
+                     
+      
+                    )}
+                  </div>
+                  <div className="row col-md-12 no-rpadding">
                     <div className="desc">
                       <div className="card text-white bg-secondary mb-3">
                         <div className="card-body">
@@ -110,14 +102,15 @@ export default class SinglePet extends Component {
                           <p>Name: {uname}</p>
                           <p>Email: {email}</p>
                           <p>Telephone: {phno}</p>
+                          <Popup modal trigger={<button className="btn-primary"> Contact Owner</button>}>
+                            <MyForm />
+                          </Popup>
                         </div>
                       </div>
                     </div>
-                  </div> */}
-                 </div> 
-        {/* <Link to="/rooms" className="btn-primary">
-              Contact
-            </Link> */}
+                  </div>
+                 
+      
             <Popup modal trigger={<button className="btn-primary"> Contact </button>}>
               <MyForm />
             </Popup>

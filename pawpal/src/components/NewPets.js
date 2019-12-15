@@ -14,7 +14,7 @@ export default class NewPets extends Component {
     return (
       <section className="new-pets">
         <Title title="new pets" />
-        <div className="featured-rooms-center">
+        <div className="col-md-12 row">
           {loading ? <Loading /> : pets}
         </div>
       </section>

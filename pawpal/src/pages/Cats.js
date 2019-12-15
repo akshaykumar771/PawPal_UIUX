@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-import SideNav from "../components/SideNav";
-import dogImg from "../images/Dog_choose_1.png";
-import catImg from "../images/Cat_choose_1.png";
 import Pet from "../components/Pet";
 import { PetContext } from "../context";
+import SideNav from "../components/SideNav";
 import Loading from "../components/Loading";
+import PetContainer from "../components/PetContainer";
+
 
     export default class NewPets extends Component {
-      static contextType = PetContext;
+      static contextType = PetContext; //refreshState
       render() {
-        let { loading, typeCat: pets } = this.context;
+        let { loading, typeCat: pets, refreshState } = this.context;
+        refreshState();
         pets = pets.map(pet => {
           return <Pet key={pet.id} pet={pet} />;
         });
@@ -17,8 +18,9 @@ import Loading from "../components/Loading";
         return (
           <>
           <SideNav />
+          <PetContainer /> 
         <section className="new-pets">
-          <div className="featured-rooms-center">
+          <div className="row col-md-9 offset-3">
           {loading ? <Loading /> : pets}
           </div>
         </section>

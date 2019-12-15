@@ -1,19 +1,17 @@
 import React from "react";
-import DogFilter from "./DogFilter";
-import PetList from "./PetList";
-import Pets from "../pages/Pets"
-import { withPetsConsumer, PetsConsumer } from "../context";
+import Filter from "./Filter";
+import { withPetsConsumer } from "../context";
 import Loading from "./Loading";
 
 function PetContainer({ context }) {
  
-  const { loading, sortedPets, pets } = context;
+  const { loading, pets } = context;
   if (loading) {
     return <Loading />;
   }
   return (
     <>
-      <DogFilter pets={pets} />
+      <Filter pets={pets} />
      
     </>
   );

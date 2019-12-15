@@ -202,7 +202,7 @@
   }
   
   .sidenav h1 {
-    color: #fff;
+    color: #e2b2b2;
     display: block;
     text-align: center;
   }
@@ -433,14 +433,51 @@
   .featured-rooms {
     padding: 5rem 0;
   }
-  .featured-rooms-center {
-    width: 80vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    grid-row-gap: 2rem;
-    grid-column-gap: 40px;
+  .not-found {
+    background: url(./images/404image.jpg) center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .body-pet {
+    background: #6f6866;
+    color: white;
+  }
+
+  .rounded-btn {
+    border-radius: 30px;
+    color: white;
+    background: #e8bca4;
+    padding: 4px 11px;
+    display: inline-block;
+    float: right;
+  }
+
+  .rounded-btn > p {
+    margin: 0;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .pet-card-img {
+    height: 250px;
+  }
+
+  .overflow-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .popup-content {
+    color: black;
+    padding: 30px !important;
+  }
+
   @media screen and (min-width: 776px) {
     .featured-rooms-center {
       width: 90vw;
@@ -621,14 +658,7 @@
   .filter-container {
     padding: 5rem 0;
   }
-  .filter-form {
-    width: 60vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
-    grid-row-gap: 2rem;
-    grid-column-gap: 40px;
-  }
+
   .form-group {
     text-transform: capitalize;
   }
@@ -657,16 +687,9 @@
     font-size: 0.8rem;
     margin-left: 0.5rem;
   }
-  @media screen and (min-width: 776px) {
-    .filter-form {
-      width: 70vw;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    .filter-form {
-      width: 95vw;
-      max-width: 1170px;
-    }
+
+  .padding-tb {
+    padding: 2rem;
   }
   /* end of rooms fitler*/
   
