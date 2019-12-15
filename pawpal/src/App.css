@@ -336,7 +336,17 @@
     padding: 2rem 0;
     background: #ecebea;
   }
+
+  .pet-carousel {
+    margin-top: 40px;
+  }
   
+  .pet-carousel img {
+    height: calc(75vh - 100px);
+    width: auto;
+    margin: 0 auto;
+}
+
   .services {
     background: var(--darkGrey);
     text-align: center;
