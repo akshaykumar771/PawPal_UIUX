@@ -138,7 +138,7 @@ export default [
       name: "Jim",
       slug: "Chartreux",
       type: "Cat",
-      age: 12,
+      age: 21,
       gender: "Male",
       featured: false,
       description:
@@ -157,7 +157,7 @@ export default [
       name: "Jam",
       slug: "Savannah",
       type: "Cat",
-      age: 12,
+      age: 32,
       gender: "Female",
       featured: true,
       description:
@@ -176,7 +176,7 @@ export default [
       name: "Billy",
       slug: "Bengal",
       type: "Cat",
-      age: 18,
+      age: 19,
       gender: "Female",
       featured: false,
       description:
