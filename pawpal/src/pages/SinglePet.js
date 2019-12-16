@@ -63,7 +63,7 @@ export default class SinglePet extends Component {
                   </Slider>
                   </div>
                   <div>
-                    )}
+                  )}
                   </div>
                   <div className="row col-md-9 offset-3 no-rpadding">
                     <div className="desc">
