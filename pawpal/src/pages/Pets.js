@@ -7,8 +7,15 @@ import PetContainer from "../components/PetContainer";
 
     export default class NewPets extends Component {
       static contextType = PetContext;
+      componentDidMount(){
+        let { setFlag1, setDogFlag } = this.context;
+        console.log("Seting pet basic");
+        setFlag1();
+        setDogFlag();
+      }
       componentWillUnmount() {
-        window.location.reload();
+        let { refreshState, unsetDogFlag } = this.context;
+        refreshState();
       }
       render() {
         let { loading,typeDog: pets } = this.context;

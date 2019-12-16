@@ -1,7 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import { PetContext } from "../context";
-import Title from "./Title";
 
 
 const getUnique = (items, value) => {
@@ -26,7 +25,7 @@ export default function PetFilter({ pets }) {
   });
    return (
       <section className="col-md-9 offset-3 padding-tb">
-      <Title title="Filter" />
+      {/* <Title title="Filter" /> */}
       <form className="row filter-form">
         <div className="col-md-6 form-group">
           <label htmlFor="gender">select gender</label>
@@ -42,6 +41,8 @@ export default function PetFilter({ pets }) {
           </select>
         </div>
         <div className="col-md-6 form-group">
+        <label htmlFor="age">Age:</label>
+        <br />
         <label htmlFor="age">{age} Months old</label>
         <input
           type="range"

@@ -35,7 +35,8 @@ import img1002 from "./images/image10.jpg";
 import img11 from "./images/image11.jpg";
 import img1102 from "./images/image11.jpg";
 import img1101 from "./images/image11.jpg";
-//import img12 from "./images/image12.jpeg";
+//import img12 from "./images/image12.jpeg"; 
+//{url: "//images.ctfassets.net/vnb5hm7f4d0e/1hC9a9I1YyA8nR…f6b3616197fdc0238e7f6e51644355f3/Rectangle_-8.png", details: {…}, fileName: "Rectangle -8.png", contentType: "image/png"}
 
 export default [
   {sys: {

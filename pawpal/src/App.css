@@ -685,6 +685,7 @@
     text-align: center;
     z-index: 9;
     color: #00c4cc;
+    font-weight: bold;
     border: 2px solid #00c4cc;
     border-radius: 50%;
     content: counter(li-counter);

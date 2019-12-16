@@ -19,6 +19,16 @@ export default class SinglePet extends Component {
            images: []
          };
       }
+      componentDidMount(){
+        let { setFlag2 } = this.context;
+        console.log("Seting pet details");
+        setFlag2();
+      }
+      componentWillUnmount(){
+        let { unsetFlag2 } = this.context;
+        console.log("Reseting pet details");
+        unsetFlag2();
+      }
       static contextType = PetContext;
     render() {
       var settings = {
@@ -40,7 +50,6 @@ export default class SinglePet extends Component {
           }
           const {
             name,
-            email,
             description,
             age,
             gender,
