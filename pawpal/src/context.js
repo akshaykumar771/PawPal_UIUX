@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import items from "./data";
+//import Client from "./Contentful";
 
 const PetContext = React.createContext();
 
@@ -18,68 +19,77 @@ class PetsProvider extends Component {
     typeDog: [],
     typeCat: [],
   };
-  componentDidMount() {
-    let pets  = this.formatData(items);
-    let newPets = pets.filter(pet => pet.featured === true);
-    let typeDog = pets.filter(pet => pet.type === "Dog");
-    let typeCat = pets.filter(pet => pet.type === "Cat");
-    let maxAge = Math.max(...pets.map(item => item.age));
-    let minAge = Math.min(...pets.map(item => item.age));
+  //------------------contentful----------
+    // getData = async () => {
+    //   try {
+    //     let response = await Client.getEntries({
+    //       content_type: "pawpal1",
+    //       // order: "sys.createdAt"
+    //       order: "-fields.age"
+    //     });
+    //   console.log(response.items);
+    //   let pets = this.formatData(response.items);
+    //   let newPets = pets.filter(pet => pet.featured === true);
+    //   let typeDog = pets.filter(pet => pet.type === "Dog");
+    //   let typeCat = pets.filter(pet => pet.type === "Cat");
+    //   let maxAge = Math.max(...pets.map(item => item.age));
+    //   let minAge = Math.min(...pets.map(item => item.age));
 
-    this.setState({
-      pets, 
-      newPets,
-      typeDog,
-      typeCat,
-      sortedPets: pets,
-      loading: false,
-      age: maxAge,
-      maxAge,
-      minAge,
-    });
-  }
+    //   this.setState({
+    //     pets, 
+    //     newPets,
+    //     typeDog,
+    //     typeCat,
+    //     sortedPets: pets,
+    //     loading: false,
+    //     age: maxAge,
+    //     maxAge,
+    //     minAge,
+    //   });
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // };
 
-  refreshState() {
-    let pets = items.map(item => {
-      let id = item.sys.id;
-      let images = item.fields.images.map(image => image.fields.file.url);
+    // componentDidMount() {
+    //   this.getData();
+    // }
+  //------------------End of contentful----------
 
-      let pet = { ...item.fields, images, id };
-      return pet;
-    });
-    let newPets = pets.filter(pet => pet.featured === true);
-    let typeDog = pets.filter(pet => pet.type === "Dog");
-    let typeCat = pets.filter(pet => pet.type === "Cat");
-    let maxAge = Math.max(...pets.map(item => item.age));
-    let minAge = Math.min(...pets.map(item => item.age));
-    console.log("refresh data")
-    // this.setState({
-    //   pets, 
-    //   newPets,
-    //   typeDog,
-    //   typeCat,
-    //   sortedPets: pets,
-    //   loading: false,
-    //   age: maxAge,
-    //   maxAge,
-    //   minAge,
-    // });
-  }
-
+  //----------------Local Data------------------
+    componentDidMount() {
+       let pets  = this.formatData(items);
+       let newPets = pets.filter(pet => pet.featured === true);
+       let typeDog = pets.filter(pet => pet.type === "Dog");
+       let typeCat = pets.filter(pet => pet.type === "Cat");
+       let maxAge = Math.max(...pets.map(item => item.age));
+       let minAge = Math.min(...pets.map(item => item.age));
+     this.setState({
+         pets, 
+         newPets,
+         typeDog,
+         typeCat,
+         sortedPets: pets,
+         loading: false,
+         age: maxAge,
+         maxAge,
+         minAge,
+       });
+     }
+//----------------End of Local Data------------------
 
   formatData(items) {
     let tempItems = items.map(item => {
       let id = item.sys.id;
       let images = item.fields.images.map(image => image.fields.file.url);
-
       let pet = { ...item.fields, images, id };
       return pet;
     });
     return tempItems;
   }
-  getPet = slug => {
+  getPet = id => {
     let tempPets = [...this.state.pets];
-    const pet = tempPets.find(pet => pet.slug === slug);
+    const pet = tempPets.find(pet => pet.id === id);
     return pet;
   };
   getPetType = type => {
@@ -88,39 +98,32 @@ class PetsProvider extends Component {
     return petType;
   }
   handleChange = event => {
-    // const target = event.target;
-    // const gender = event.target.gender;
     const value = event.target.value;
     const name = event.target.name;
     this.setState(
        {
          [name]: value
        },
-       this.filterPets
+       this.filterPets   
      );
   };
-  filterPets1 = () =>{
-    console.log("Hello filter pets");
-  }
    filterPets = () => {
      let {
+       pets,
        gender,
        age
      } = this.state;
-      let pets  = this.formatData(items);
-
       let tempPets = [...pets];
-     if (gender !== "all") {
-      tempPets = tempPets.filter(pet => pet.gender === gender);
-     }
-    tempPets = tempPets.filter(pet => pet.age <= age);
-    let typeDog1 = tempPets.filter(pet => pet.type === "Dog");
-    let typeCat1 = tempPets.filter(pet => pet.type === "Cat");
-     this.setState({
-      pets: tempPets,
-      typeDog: typeDog1,
-      typeCat: typeCat1
-     });
+      if (gender !== "all") {
+       tempPets = tempPets.filter(pet => pet.gender === gender);
+      }
+     tempPets = tempPets.filter(pet => pet.age <= age);
+     let typeDogTemp = tempPets.filter(pet => pet.type === "Dog");
+     let typeCatTemp = tempPets.filter(pet => pet.type === "Cat");
+      this.setState({
+       typeDog: typeDogTemp,
+       typeCat: typeCatTemp
+      });
    };
  render() {
     return (
@@ -129,8 +132,7 @@ class PetsProvider extends Component {
          ...this.state,
            getPet: this.getPet,
            getPetType: this.getPetType,
-           handleChange: this.handleChange,
-           refreshState: this.refreshState
+           handleChange: this.handleChange
          }}
        >
          {this.props.children}
@@ -140,7 +142,6 @@ class PetsProvider extends Component {
 }
 
  const PetsConsumer = PetContext.Consumer;
-
 export function withPetsConsumer(Component) {
   return function ConsumerWrapper(props) {
     return (

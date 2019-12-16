@@ -11,7 +11,6 @@ export default function PetFilter({ pets }) {
    const context = useContext(PetContext);
    const {
      handleChange,
-    //  gender,
      age,
      maxAge,
      minAge,
@@ -43,7 +42,7 @@ export default function PetFilter({ pets }) {
           </select>
         </div>
         <div className="col-md-6 form-group">
-        <label htmlFor="price">{age} Months old</label>
+        <label htmlFor="age">{age} Months old</label>
         <input
           type="range"
           name="age"
@@ -51,7 +50,7 @@ export default function PetFilter({ pets }) {
           max={maxAge}     
           id="age"
           onChange={handleChange}
-          className="form-control"
+          className="form-control-range"
         />
       </div> 
       </form>

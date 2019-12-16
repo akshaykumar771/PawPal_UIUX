@@ -9,6 +9,7 @@ import Cats from "../pages/Cats";
 import Pets from "../pages/Pets";
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
+<<<<<<< HEAD
 export default class SideNav extends Component {
   constructor(props){
     super(props)
@@ -40,12 +41,25 @@ export default class SideNav extends Component {
 </div>
 
         
+=======
+export default function SideNav({ sidenav }) {
+  // function refreshPage () {
+  //   window.location.reload()
+  // }
+    return (
+      <div className="col-md-3 sidenav">
+        <h1> <FaPaw /> PawPal</h1>
+        {/* <button onclick={refreshPage}>
+        <a href="/choosepets">About</a>
+        </button> */}
+        <a href="/rooms">About</a>
+        <a href="/pets">Services</a>
+>>>>>>> cdf7900853900678d76832aba0afa888423d7e42
         {/* <a href="#">Contact</a> */}
         <Popup modal trigger={<a href="#">Contact</a>}>
-              <MyForm />
+              {close => <MyForm uemail="nithinbs18@gmail.com" close={close}/>}
         </Popup>
       </div>
-
     );
   }
 }

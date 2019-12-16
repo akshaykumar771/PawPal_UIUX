@@ -20,7 +20,7 @@ function App() {
             <Route exact path="/choosepets/" component={ChoosePets} />
             <Route exact path="/choosepets/Dogs" component={Pets} />
             <Route exact path="/choosepets/Cats" component={cats} />
-            <Route exact path="/pets/:slug" component={SinglePet} />
+            <Route exact path="/pets/:id" component={SinglePet} />
             <Route component={Error} />
           </Switch>
         </>

@@ -7,10 +7,11 @@ import PetContainer from "../components/PetContainer";
 
     export default class NewPets extends Component {
       static contextType = PetContext;
-      
+      componentWillUnmount() {
+        window.location.reload();
+      }
       render() {
-        let { loading,typeDog: pets, refreshState } = this.context;
-        refreshState();
+        let { loading,typeDog: pets } = this.context;
         pets = pets.map(pet => {
           return <Pet key={pet.id} pet={pet} />;
         });
