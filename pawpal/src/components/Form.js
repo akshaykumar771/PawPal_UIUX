@@ -12,7 +12,7 @@ export default class MyForm extends React.Component {
   const { status } = this.state;
   return (
 <>
-        <a className="close" >
+        <a className="close" onClick={this.props.close} >
           &times;
         </a>
         <div className="content">

@@ -18,7 +18,7 @@ export default function SideNav({ sidenav }) {
         <a href="/pets">Services</a>
         {/* <a href="#">Contact</a> */}
         <Popup modal trigger={<a href="#">Contact</a>}>
-              <MyForm uemail="nithinbs18@gmail.com"/>
+              {close => <MyForm uemail="nithinbs18@gmail.com" close={close}/>}
         </Popup>
       </div>
     );
