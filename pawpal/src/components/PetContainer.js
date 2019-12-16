@@ -10,10 +10,10 @@ function PetContainer({ context }) {
     return <Loading />;
   }
   return (
-    <>
+     <>
       <Filter pets={pets} />
      
-    </>
+    </> 
   );
 }
 

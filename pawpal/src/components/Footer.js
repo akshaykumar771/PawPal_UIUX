@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { FaPaw } from "react-icons/fa"
-import { FaInstagram } from "react-icons/fa"
-import { FaFacebook } from "react-icons/fa"
-import { FaTwitter} from "react-icons/fa"
+import React, { Component } from 'react';
+import { FaPaw } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter} from "react-icons/fa";
 import { FaHeart} from "react-icons/fa"
 import { FaCopyright} from "react-icons/fa"
 
-export default function Footer({ footer }) {
+export default function Footer({ footer,children,contact }) {
     return (
     <div className="col-md-12 footer">
         <div className="row footer-1  text-center">
@@ -18,7 +18,8 @@ export default function Footer({ footer }) {
                 <a href="About">About</a>
                 <a href="About">Events</a>
                 <a href="About">Team</a>
-                <a href="About">Contact Us</a>
+                <a href="About">Contact Us {contact}</a>
+            
             </div>
 
             <div className="col-md-4 social text-center">

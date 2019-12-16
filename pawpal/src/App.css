@@ -69,12 +69,27 @@
   .landing-p{
     font-size: 24px;
     color: black;
+    margin-right: 1em;
+    margin-bottom: 0em;
+    font-weight: bold;
+    font-style: italic;
   }
-  
+  .title{
+    font-weight: bold;
+  }
+  .subtitle{
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-style: italic;
+    margin-right: 5em;
+  }
+  .service-description{
+    line-height: normal;
+  }
   .landing-btn {
     position: absolute;
     bottom: -25px;
-    right: -100px;
+    right: -70px;
     width: 75px;
     line-height: 75px;
     text-align:center;
