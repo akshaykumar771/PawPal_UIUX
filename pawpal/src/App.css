@@ -679,7 +679,7 @@
     margin-left: 1.25em;
     padding-left: 2.5em;
     counter-reset: li-counter;
-    border-left: 1px solid #00c4cc;
+    border-left: 5px solid gray;
     position: relative; }
   
   .circles-list ol > li {
@@ -699,12 +699,12 @@
     line-height: 2.25em;
     text-align: center;
     z-index: 9;
-    color: #00c4cc;
+    color: rgb(32, 31, 31);
     font-weight: bold;
-    border: 2px solid #00c4cc;
+    border: 5px solid #E8C5B2;
     border-radius: 50%;
     content: counter(li-counter);
-    background-color: #ebeced;
+    background-color: rgb(32, 31, 31);
     counter-increment: li-counter; }
   
   

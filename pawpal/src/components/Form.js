@@ -16,29 +16,40 @@ export default class MyForm extends React.Component {
         <a className="close" onClick={this.props.close} >
           &times;
         </a>
-        <div className="content">
+        <div className="content bg">
         <form
         onSubmit={this.submitForm}
         action="https://formspree.io/xoqvroan"
         method="POST"
-      >
-        {status === "SUCCESS" ? <p class="formSubmission">Thanks for submission!</p> : <label className="formSubmission">Contact Form: </label>}
+      > 
+        
+        {status === "SUCCESS" ? <p class="formSubmission dispTitle">Thanks for submission!</p> : <label className="formSubmission dispTitle">Please tell us something about yourself!! </label>}
         <br /><br />
+        <div class="row dispSide">
         {status === "SUCCESS" ? <div /> : <label className="form">Full name:</label>}
+        {status === "SUCCESS" ? <div /> : <input className="formText" type="text" name="name" required/>}
+        </div>
         {status === "SUCCESS" ? <div /> : <input type = "hidden" name="PetName" value={this.props.name} readOnly/>}
         {status === "SUCCESS" ? <div /> : <input type = "hidden" name="PetBreed" value={this.props.slug} readOnly/>}
         {status === "SUCCESS" ? <div /> : <input type = "hidden" name="PetID" value={this.props.id} readOnly/>}
-        {status === "SUCCESS" ? <div /> : <input className="formText" type="text" name="name" required/>}
-        {status === "SUCCESS" ? <div /> : <label className="form">Email:</label>}
+        <div class="row dispSide">
+        {status === "SUCCESS" ? <div /> : <label className="form">User Email: </label>}
         {status === "SUCCESS" ? <div /> : <input type="email" className="formText" name="userEmail" required/>}
+        </div>
         {console.log(this.props.uemail)}
         {status === "SUCCESS" ? <div /> : <input type = "hidden" name="email" value="nithinbs18@gmail.com" readOnly/>}
-        {status === "SUCCESS" ? <div /> : <label className="form">Phone number:</label>}
+        <div class="row dispSide">
+        {status === "SUCCESS" ? <div /> : <label className="form">Phone no :</label>}
         {status === "SUCCESS" ? <div /> : <input type="number" className="formText" name="phone" required/> }
+        </div>
+        <div class="row dispSide">
         {status === "SUCCESS" ? <div /> : <label className="form">Message:</label>}
         {status === "SUCCESS" ? <div /> : <textarea className="formTextarea" name="Message"></textarea>}
+        </div>
+        <div class="dispTitle">
         {status === "SUCCESS" ? <Link to="/choosepets">Back to adoption</Link> : <button className="formsubmit" type="submit">Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
+        </div>
       </form>
         </div>
         </ >

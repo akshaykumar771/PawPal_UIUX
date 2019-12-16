@@ -30,7 +30,7 @@ export default class SideNav extends Component {
 
           <ol>
           <li><Link to ="/choosepets/">Dogs or Cats??</Link></li>
-          {flag1 === false ? <li>Pet Basics </li> : <li>{dogflag === true ?<Link to="/choosepets/Dogs">Pet Basics </Link>: <Link to="/choosepets/Cats">Pet Basics </Link>}</li>}
+          {flag1 === false ? <li  >Pet Basics </li> : <li>{dogflag === true ?<Link to="/choosepets/Dogs">Pet Basics </Link>: <Link to="/choosepets/Cats">Pet Basics </Link>}</li>}
           {flag2 === false ? <li>Pet Details</li> : <li> <a href="#">Pet Details</a></li>}
           </ol>
           </div>
