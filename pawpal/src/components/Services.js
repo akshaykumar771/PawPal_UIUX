@@ -1,32 +1,26 @@
 import React, { Component } from "react";
-import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from "react-icons/fa";
+import { FaCreativeCommonsNcEu,FaHandshake, FaBinoculars } from "react-icons/fa";
 import Title from "./Title";
 export default class Services extends Component {
   state = {
     services: [
       {
-        icon: <FaCocktail />,
-        title: "Find a Pet you Like",
+        icon: <FaBinoculars />,
+        title: "Choose From A Varierty Of Pets ",
         info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, corporis!"
+          "At Pawpal you will get to select from a variety of pets"
       },
       {
-        icon: <FaHiking />,
-        title: "Meet and Greet",
+        icon: <FaHandshake />,
+        title: "Find Other Pet Lovers",
         info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, corporis!"
+          "At Pawpal you will get to meet the others who love pets"
       },
       {
-        icon: <FaShuttleVan />,
-        title: "Paperwork",
+        icon: <FaCreativeCommonsNcEu/>,
+        title: "Say Adios to Commercialism",
         info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, corporis!"
-      },
-      {
-        icon: <FaBeer />,
-        title: "Finalize Adoption",
-        info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, corporis!"
+          "Say No to Breeders and Puppy mills"
       }
     ]
   };

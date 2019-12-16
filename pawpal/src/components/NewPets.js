@@ -13,7 +13,7 @@ export default class NewPets extends Component {
 
     return (
       <section className="new-pets">
-        <Title title="new pets" />
+        <Title title="new comers" />
         <div className="col-md-12 row">
           {loading ? <Loading /> : pets}
         </div>

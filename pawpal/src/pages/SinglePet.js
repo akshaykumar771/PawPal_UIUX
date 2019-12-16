@@ -89,8 +89,8 @@ export default class SinglePet extends Component {
                       <div className="card text-white bg-secondary mb-3">
                         <div className="card-body">
                           <h5 className="card-title">About {name}'s Owner</h5>
-                          <p>Name: {uname}</p>
-                          <p>City: {city}</p>
+                          <p>{uname}</p>
+                          <p>{city}</p>
                           <Popup modal trigger={<button className="btn-primary"> Contact Owner</button>}>
                           {close => <MyForm name={pet.name} slug={pet.slug} id={pet.id} uemail={pet.email} close={close}/>}
                           </Popup>
