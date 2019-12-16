@@ -49,12 +49,18 @@ export default function SideNav({ sidenav }) {
     return (
       <div className="col-md-3 sidenav">
         <h1> <FaPaw /> PawPal</h1>
-        {/* <button onclick={refreshPage}>
-        <a href="/choosepets">About</a>
-        </button> */}
-        <a href="/rooms">About</a>
-        <a href="/pets">Services</a>
->>>>>>> cdf7900853900678d76832aba0afa888423d7e42
+       <div class="text-element content-element circles-list">
+<ol>
+<li><Link to ="/choosepets/">Dogs or Cats??</Link>
+</li>
+<li>
+    <Link to="/choosepets/Dogs">Pet Basics </Link>:<Link to="/choosepets/Cats">Pet Basics </Link>
+</li>
+<li><Link to ="/">Pet Details</Link></li>
+</ol>
+</div>
+
+        
         {/* <a href="#">Contact</a> */}
         <Popup modal trigger={<a href="#">Contact</a>}>
               {close => <MyForm uemail="nithinbs18@gmail.com" close={close}/>}
