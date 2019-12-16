@@ -18,7 +18,7 @@ export default class MyForm extends React.Component {
         <div className="content">
         <form
         onSubmit={this.submitForm}
-        action="https://formspree.io/xoqvroan"
+        //action="https://formspree.io/xoqvroan"
         method="POST"
       >
         {status === "SUCCESS" ? <p class="formSubmission">Thanks for submission!</p> : <label className="formSubmission">Contact Form: </label>}
@@ -30,7 +30,8 @@ export default class MyForm extends React.Component {
         {status === "SUCCESS" ? <div /> : <input className="formText" type="text" name="name" required/>}
         {status === "SUCCESS" ? <div /> : <label className="form">Email:</label>}
         {status === "SUCCESS" ? <div /> : <input type="email" className="formText" name="userEmail" required/>}
-        {status === "SUCCESS" ? <div /> : <input type = "hidden" name="email" value="nithinbs18@gmail.com" readOnly/>}
+        {console.log(this.props.uemail)}
+        {status === "SUCCESS" ? <div /> : <input type = "hidden" name="email" value={this.props.uemail} readOnly/>}
         {status === "SUCCESS" ? <div /> : <label className="form">Phone number:</label>}
         {status === "SUCCESS" ? <div /> : <input type="number" className="formText" name="phone" required/> }
         {status === "SUCCESS" ? <div /> : <label className="form">Message:</label>}

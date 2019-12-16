@@ -40,7 +40,7 @@ export default class SinglePet extends Component {
           }
           const {
             name,
-            id,
+            email,
             description,
             age,
             gender,
@@ -92,7 +92,7 @@ export default class SinglePet extends Component {
                           <p>Name: {uname}</p>
                           <p>City: {city}</p>
                           <Popup modal trigger={<button className="btn-primary"> Contact Owner</button>}>
-                            <MyForm name={pet.name} slug={pet.slug} id={pet.id} />
+                            <MyForm name={pet.name} slug={pet.slug} id={pet.id} uemail={pet.email} />
                           </Popup>
                         </div>
                       </div>
