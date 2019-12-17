@@ -12,7 +12,7 @@ export default function Pet({ pet}) {
                 <h4>{name}</h4>
                 <p className="overflow-text">{description}</p>
                 <Link to={`/pets/${id}`} className="rounded-btn">
-                    <p className="card-title">More info</p>
+                    <p className="card-title more-details">More Details</p>
                 </Link>
                 </div>
             </div>

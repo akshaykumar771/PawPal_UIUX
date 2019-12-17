@@ -397,7 +397,21 @@
     top: 1em;
     left: 18em;
   }
-  
+  .contact-text{
+    margin-top: 18em ;
+    font-size: large;
+    color:white;
+    font-weight: bold;
+  }
+  .cstm-btn{
+    color: #000 !important;
+    background-color: #DFCDC3 !important;
+    border-color: #000 !important;
+  }
+  .more-details{
+    color: #6F6866;
+    font-weight: bold;
+  }
   .service span {
     display: inline-block;
     color: var(--primaryColor);
