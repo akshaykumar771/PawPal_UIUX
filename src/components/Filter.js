@@ -29,7 +29,7 @@ export default function PetFilter({ pets }) {
         </div>
         <div className="col-md-4 offset-4 form-group">
         <label htmlFor="age" className="select-age"> Select Age</label>
-        <label className="age-slider" htmlFor="age">{age} Months old</label>
+        <label className="age-desc" htmlFor="age">{age} Months old</label>
         <input
           type="range"
           name="age"
@@ -37,7 +37,7 @@ export default function PetFilter({ pets }) {
           max={maxAge}     
           id="age"
           onChange={handleChange}
-          className="form-control-range"
+          className="form-control-range age-slider"
         />
       </div> 
       </form>
