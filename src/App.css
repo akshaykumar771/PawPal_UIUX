@@ -402,9 +402,12 @@
     grid-column-gap: 50px;
 
   }
-  .age-slider{
+  .age-desc{
     /* text-align: center; */
     font-size: 12px;
+    top: 1em;
+    position: relative;
+    
   }
   .contact-text{
     margin-top: 18em ;
@@ -730,7 +733,11 @@
     padding: 2rem;
   }
   /* end of rooms fitler*/
-  
+  .age-slider{
+    position:relative;
+    top: 1em;
+
+  }
 
   .content-element{
     margin:50px 0 0 50px;

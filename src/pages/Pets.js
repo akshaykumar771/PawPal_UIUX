@@ -6,7 +6,9 @@ import Loading from "../components/Loading";
 import PetContainer from "../components/PetContainer";
 
     export default class NewPets extends Component {
+      
       static contextType = PetContext;
+
       componentDidMount(){
         let { setFlag1, setDogFlag } = this.context;
         setFlag1();
@@ -16,12 +18,14 @@ import PetContainer from "../components/PetContainer";
         let { refreshState} = this.context;
         refreshState();
       }
+      
       render() {
+        
         let { loading,typeDog: pets } = this.context;
+      
         pets = pets.map(pet => {
           return <Pet key={pet.id} pet={pet} />;
         });
-    
         return (
             <>
             <SideNav />
