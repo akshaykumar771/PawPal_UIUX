@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { PetContext } from "../context";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
-import SideNav from "./SideNav"
+import SideNav from "./SideNav";
+
 
 
 export default class Card extends Component {
@@ -19,6 +20,7 @@ export default class Card extends Component {
         return (
             <>
             <SideNav />
+            
             <div className = "main_card">
                 <div className="card">
                     <div className="card-body">

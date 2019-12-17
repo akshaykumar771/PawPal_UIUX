@@ -67,8 +67,8 @@
   }
   
   .landing-p{
-    font-size: 24px;
-    color: black;
+    font-size: 30px;
+    color: white;
     margin-right: 1em;
     margin-bottom: 0em;
     font-weight: bold;
@@ -76,12 +76,25 @@
   }
   .title{
     font-weight: bold;
+    margin-left: 13em;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 60px;
+    margin-bottom: 6em;
   }
   .subtitle{
     font-family: 'Roboto';
-    font-size: 24px;
+    font-size: 28px;
     font-style: italic;
-    margin-right: 5em;
+    margin-left: 34em;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    bottom: 12.5em;
   }
   .service-description{
     line-height: normal;
@@ -349,6 +362,7 @@
   /* services */
   .services {
     padding: 2rem 0;
+    bottom: 2em;
   }
 
   .new-pets {
@@ -377,7 +391,13 @@
     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
     grid-row-gap: 2rem;
     grid-column-gap: 50px;
+
   }
+  .age-slider{
+    top: 1em;
+    left: 18em;
+  }
+  
   .service span {
     display: inline-block;
     color: var(--primaryColor);

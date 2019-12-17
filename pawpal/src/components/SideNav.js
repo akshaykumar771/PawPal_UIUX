@@ -4,7 +4,8 @@ import { FaPaw } from "react-icons/fa"
 import "./styles.css";
 import {Link} from "react-router-dom";
 import { PetContext } from "../context";
-
+import Popup from "reactjs-popup";
+import MyForm from "./Form";
 export default class SideNav extends Component {
   static contextType = PetContext;
   constructor(props){
@@ -34,6 +35,12 @@ export default class SideNav extends Component {
           {flag2 === false ? <li>Pet Details</li> : <li > <Link style={{color : "white", fontSize: "large",fontWeight: "bold"}}>Pet Details</Link></li>}
           </ol>
           </div> 
+          <div className="links text-right contact-team">
+            <p>Want to put up your pet for adoption?</p>
+      <Popup modal trigger={<button>Contact Us</button>}>
+                          {close => <MyForm uemail={"nithinbs18@gmail.com"} close={close} msg={"Hello!! Contact us to put up your pet for adoption."}/>}
+                </Popup>
+                </div>
       </div>
     );
   }

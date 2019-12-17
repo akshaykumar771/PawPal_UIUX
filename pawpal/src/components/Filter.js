@@ -26,10 +26,9 @@ export default function PetFilter({ pets }) {
    return (
       <section className="col-md-9 offset-3 padding-tb">
       {/* <Title title="Filter" /> */}
-      <br />
-      <br />
+      <br/>
       <form className="row filter-form">
-        <div className="col-md-6 form-group">
+        <div className="col-md-3 form-group">
           <label htmlFor="gender">select Gender</label>
           <select
             name="gender"
@@ -42,8 +41,8 @@ export default function PetFilter({ pets }) {
             <option value="Female">Female</option>
           </select>
         </div>
-        <div className="col-md-6 form-group">
-        <label htmlFor="age"> Select Age</label>
+        <div className="col-md-6 form-group age-slider">
+        <label htmlFor="age" className="select-age"> Select Age</label>
         <input
           type="range"
           name="age"
