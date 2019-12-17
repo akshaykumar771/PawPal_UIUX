@@ -17,15 +17,19 @@ export default class MyForm extends React.Component {
         <div className="content bg">
         <form
         onSubmit={this.submitForm}
-        action="https://formspree.io/xoqvroan"
+        action="https://formspree.io/xdoaopjj"
         method="POST"
       > 
         
         {status === "SUCCESS" ? <p class="formSubmission dispTitle">Thanks for contacting! <br /> We will get back to you soon &#128512; </p> : <label className="formSubmission dispTitle"> {this.props.msg} </label>}
         <br /><br />
         <div class="row dispSide">
-        {status === "SUCCESS" ? <div /> : <label className="form">Full name:</label>}
-        {status === "SUCCESS" ? <div /> : <input className="formText" type="text" name="name" required/>}
+        {status === "SUCCESS" ? <div /> : <label className="form">First name:</label>}
+        {status === "SUCCESS" ? <div /> : <input className="formText" type="text" name="fname" required/>}
+        </div>
+        <div class="row dispSide">
+        {status === "SUCCESS" ? <div /> : <label className="form">Last name:</label>}
+        {status === "SUCCESS" ? <div /> : <input className="formText" type="text" name="lname" required/>}
         </div>
         {status === "SUCCESS" ? <div /> : <input type = "hidden" name="PetName" value={this.props.name} readOnly/>}
         {status === "SUCCESS" ? <div /> : <input type = "hidden" name="PetBreed" value={this.props.slug} readOnly/>}
@@ -42,7 +46,7 @@ export default class MyForm extends React.Component {
         </div>
         <div class="row dispSide">
         {status === "SUCCESS" ? <div /> : <label className="form">Message:</label>}
-        {status === "SUCCESS" ? <div /> : <textarea className="formTextarea" name="Message"></textarea>}
+        {status === "SUCCESS" ? <div /> : <textarea className="formTextarea" name="Message" required></textarea>}
         </div>
         <div class="dispTitle">
         {status === "SUCCESS" ? <Link to="/choosepets">Back to adoption</Link> : <button className="formsubmit" type="submit">Contact</button>}
@@ -64,6 +68,7 @@ submitForm(ev) {
   xhr.onreadystatechange = () => {
     if (xhr.readyState !== XMLHttpRequest.DONE) return;
     if (xhr.status === 200) {
+      console.log(xhr);
       form.reset();
       this.setState({ status: "SUCCESS" });
     } else {
