@@ -49,7 +49,7 @@ export default class MyForm extends React.Component {
         {status === "SUCCESS" ? <div /> : <textarea className="formTextarea" name="Message" required></textarea>}
         </div>
         <div class="dispTitle">
-        {status === "SUCCESS" ? <Link to="/choosepets">Back to adoption</Link> : <button className="formsubmit" type="submit">Contact</button>}
+        {status === "SUCCESS" ? <Link style={{color: "#545871", fontSize: "x-large"}} to="/choosepets">Back to adoption</Link> : <button className="formsubmit" type="submit">Contact</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
         </div>
       </form>

@@ -19,7 +19,7 @@
   body {
     /* padding-top: 66px; */
     color: var(--mainBlack);
-    background: var(--mainWhite);
+    background: #DFCDC3;
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
   }
@@ -761,7 +761,16 @@
     margin-bottom: 3.125em;
     clear: both;
    }
-  
+
+   .error-message{
+    position: relative;
+    left: 10em;
+    font-size: 35px;
+    top: 5em;
+   }
+  .new-comers{
+    
+  }
   .circles-list ol > li:before{
     position: absolute;
     top: auto;

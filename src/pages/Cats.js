@@ -30,7 +30,7 @@ import PetContainer from "../components/PetContainer";
           <PetContainer /> 
         <section className="new-pets">
           <div className="row col-md-9 offset-3">
-          {pets.length === 0 ? <h3> Sorry pet not found!! </h3>: loading ? <Loading /> : pets} 
+          {pets.length === 0 ? <h3 className="error-message"> Sorry pet not found!! </h3>: loading ? <Loading /> : pets} 
           </div>
         </section>
         </ >
