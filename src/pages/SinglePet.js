@@ -58,7 +58,7 @@ export default class SinglePet extends Component {
           // console.log(images)
           //const [mainImg, ...defaultImg] = images;
         return (
-            <div className="col-md-12">
+            <div className="col-md-12 pets-bg">
                 <SideNav />
                   <div className = "col-md-9 offset-3 container pet-carousel">
                   <Slider {...settings}>

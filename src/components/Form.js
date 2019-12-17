@@ -13,9 +13,7 @@ export default class MyForm extends React.Component {
   const { status } = this.state;
   return (
 <>
-        <a className="close" onClick={this.props.close} >
-          &times;
-        </a>
+    {status !== "SUCCESS" ?<a className="close" onClick={this.props.close} >&times;</a> : <div />}
         <div className="content bg">
         <form
         onSubmit={this.submitForm}
@@ -23,7 +21,7 @@ export default class MyForm extends React.Component {
         method="POST"
       > 
         
-        {status === "SUCCESS" ? <p class="formSubmission dispTitle">Thanks for submission!</p> : <label className="formSubmission dispTitle"> {this.props.msg} </label>}
+        {status === "SUCCESS" ? <p class="formSubmission dispTitle">Thanks for contacting! <br /> We will get back to you soon &#128512; </p> : <label className="formSubmission dispTitle"> {this.props.msg} </label>}
         <br /><br />
         <div class="row dispSide">
         {status === "SUCCESS" ? <div /> : <label className="form">Full name:</label>}

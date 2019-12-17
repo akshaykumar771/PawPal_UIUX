@@ -21,7 +21,7 @@ export default function Footer({ footer,children,contact }) {
                 <a href="About">Events</a>
                 <a href="About">Team</a>
                 <Popup modal trigger={<a href="#">Contact Us</a>}>
-                          {close => <MyForm uemail={"nithinbs18@gmail.com"} close={close} msg={"Hello!! Contact us to put up your pet for adoption."}/>}
+                          {close => <MyForm name="" slug="" id="" uemail={"nithinbs18@gmail.com"} close={close} msg={"Hello!! Contact us to put up your pet for adoption."}/>}
                 </Popup>
             </div>
 

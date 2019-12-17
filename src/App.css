@@ -371,15 +371,16 @@
 
   .new-pets {
     padding: 0 0 2rem 0;
-    background: #ecebea;
+    background: #dfcdc3;
   }
 
   .pets-bg {
-    background: #ecebea;
+    background: #dfcdc3;
   }
 
   .pet-carousel {
-    margin-top: 40px;
+    padding-top: 40px;
+    background: #dfcdc3;
   }
   
   .pet-carousel img {
@@ -402,7 +403,7 @@
 
   }
   .age-slider{
-    text-align: center;
+    /* text-align: center; */
     font-size: 12px;
   }
   .contact-text{
