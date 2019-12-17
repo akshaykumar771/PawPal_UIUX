@@ -25,7 +25,7 @@ export default class Card extends Component {
                 <div className="card">
                     <div className="card-body">
                         <div className="img-container">
-                            <img className ="card-img-top" src="https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/pawpal/src/images/Dog_Ch_1.png" alt="Avatar" />
+                            <img className ="card-img-top" src="https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/src/images/Dog_Ch_1.png" alt="Avatar" />
                             <Link   to={`/choosepets/Dogs`} className="btn-primary room-link" >
                             Dog Person ?</Link>
                         </div>
@@ -35,7 +35,7 @@ export default class Card extends Component {
                 <div className="card">
                     <div className="card-body">
                         <div className="img-container">
-                            <img className ="card-img-top" src="https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/pawpal/src/images/Cat_Ch_1.png" alt="Avatar" />
+                            <img className ="card-img-top" src="https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/src/images/Cat_Ch_1.png" alt="Avatar" />
                         <Link to={`/choosepets/Cats`} className="btn-primary room-link">Cat Person ?</Link>
                         </div>
                     </div>

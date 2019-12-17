@@ -156,7 +156,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background: url("https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/pawpal/src/images/sidenav_1.png") center/cover no-repeat;
+    background: url("https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/src/images/sidenav_1.png") center/cover no-repeat;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
   }
@@ -293,12 +293,12 @@
   .defaultHero,
   .roomsHero {
     min-height: calc(100vh);
-    background: url("https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/pawpal/src/images/landing_1.jpg") center/cover no-repeat;
+    background: url("https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/src/images/landing_1.jpg") center/cover no-repeat;
     text-align: right;
   
   }
   .roomsHero {
-    background-image: url("https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/pawpal/src/images/room-2.jpeg");
+    background-image: url("https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/src/images/room-2.jpeg");
     min-height: 60vh;
   }
   /* End of Hero */
@@ -445,7 +445,7 @@
     padding: 5rem 0;
   }
   .not-found {
-    background: url(https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/pawpal/src/images/404image.jpg) center/cover no-repeat;
+    background: url(https://raw.githubusercontent.com/akshaykumar771/PawPal_UIUX/master/src/images/404image.jpg) center/cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
