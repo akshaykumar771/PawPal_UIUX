@@ -54,6 +54,10 @@
   }
   
   .btn-primary {
+    background: white;
+    color: #6c757c;
+    border: 3px solid white;
+    border-radius: 20px;
     display: inline-block;
     text-decoration: none;
     letter-spacing: var(--mainSpacing);
@@ -337,7 +341,7 @@
   /* Title */
   .section-title {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   .section-title h4 {
     font-size: 2rem;
@@ -366,7 +370,11 @@
   }
 
   .new-pets {
-    padding: 2rem 0;
+    padding: 0 0 2rem 0;
+    background: #ecebea;
+  }
+
+  .pets-bg {
     background: #ecebea;
   }
 
@@ -394,8 +402,8 @@
 
   }
   .age-slider{
-    top: 1em;
-    left: 18em;
+    text-align: center;
+    font-size: 12px;
   }
   
   .service span {
@@ -473,6 +481,7 @@
   .popup-content {
     color: black;
     padding: 30px !important;
+    background: #e8c6b3 !important;
   }
 
   @media screen and (min-width: 776px) {
@@ -578,12 +587,23 @@
   .info {
     margin: 1rem 0;
   }
+
+  .pet-desc {
+    font-size: 24px;
+  }
   .desc h3 {
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
   }
   .desc p {
     line-height: 1.5;
+  }
+
+  .btn-contact {
+    background: white;
+    color: #6c757c;
+    border: 3px solid white;
+
   }
   .info h3,
   .info h6 {
@@ -651,6 +671,12 @@
     }
   }
   /* end of roomlist */
+
+  .dispTitle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
   /*  rooms fitler*/
   .filter-container {
     padding: 5rem 0;
@@ -716,23 +742,23 @@
   
   .circles-list ol > li:before{
     position: absolute;
-    top: -0.5em;
+    top: auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 1em;
-    left: -3.75em;
-    width: 2.25em;
-    height: 2.25em;
+    left: -3.50em;
+    width: 1.50em;
+    height: 1.50em;
     line-height: 2.25em;
     text-align: center;
     z-index: 9;
-    color: rgb(32, 31, 31);
+    color: transparent;
     font-weight: bold;
-    border: 5px solid #E8C5B2;
+    border: 4px solid #E8C5B2;
     border-radius: 50%;
     content: counter(li-counter);
     background-color: rgb(32, 31, 31);
-    counter-increment: li-counter; }
+    counter-increment: unset; }
 /* 
     .circles-listp{
       line-height: 2.25em;

@@ -73,37 +73,28 @@ export default class SinglePet extends Component {
                   )}
                   </div>
                   <div className="row col-md-9 offset-3 no-rpadding">
-                    <div className="desc">
-                      <div className="card text-white bg-secondary mb-3">
-                        <div className="card-body">
-                          <h5 className="card-title">Hi I am {name} !</h5>
-                          <p className="card-text">{description}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 no-lpadding">
-                      <div className="card text-white bg-secondary mb-3">
-                        <div className="card-body">
+                    <div class="card col-md-12 text-white bg-secondary">
+                      <div class="card-body ">
+                        <div className="row">
+                          <div className="col-md-8">
+                            <p className="card-text pet-desc">{description}</p>
+                          </div>
+                          <div className="col-md-4">
                           <h5 className="card-title">About {name}</h5>
-                          <p>Age : {age} months old</p>
-                          <p>Gender : {gender}</p>
-                          <p>Breed : {slug}</p>
+                            <p>Age : {age} months old</p>
+                            <p>Gender : {gender}</p>
+                            <p>Breed : {slug}</p>
+                            <h5 className="card-title">About {name}'s Owner</h5>
+                            <p>{uname}</p>
+                            <p>{city}</p>
+                            <Popup modal trigger={<button className="btn-primary btn-contact"> Contact Owner</button>}>
+                            {close => <MyForm name={pet.name} slug={pet.slug} id={pet.id} uemail={pet.email} close={close} msg={"Hello!! Please tell us something about yourself!!"}/>}
+                            </Popup>
+                          </div> 
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-6 no-rpadding">
-                      <div className="card text-white bg-secondary mb-3">
-                        <div className="card-body">
-                          <h5 className="card-title">About {name}'s Owner</h5>
-                          <p>{uname}</p>
-                          <p>{city}</p>
-                          <Popup modal trigger={<button className="btn-primary"> Contact Owner</button>}>
-                          {close => <MyForm name={pet.name} slug={pet.slug} id={pet.id} uemail={pet.email} close={close} msg={"Hello!! Please tell us something about yourself!!"}/>}
-                          </Popup>
-                        </div>
-                      </div>
-                    </div>
-                  </div>      
+                  </div>
             </div>
         )
     }
