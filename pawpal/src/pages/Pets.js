@@ -9,12 +9,11 @@ import PetContainer from "../components/PetContainer";
       static contextType = PetContext;
       componentDidMount(){
         let { setFlag1, setDogFlag } = this.context;
-        console.log("Seting pet basic");
         setFlag1();
         setDogFlag();
       }
       componentWillUnmount() {
-        let { refreshState, unsetDogFlag } = this.context;
+        let { refreshState} = this.context;
         refreshState();
       }
       render() {

@@ -23,7 +23,7 @@ export default class MyForm extends React.Component {
         method="POST"
       > 
         
-        {status === "SUCCESS" ? <p class="formSubmission dispTitle">Thanks for submission!</p> : <label className="formSubmission dispTitle">Please tell us something about yourself!! </label>}
+        {status === "SUCCESS" ? <p class="formSubmission dispTitle">Thanks for submission!</p> : <label className="formSubmission dispTitle"> {this.props.msg} </label>}
         <br /><br />
         <div class="row dispSide">
         {status === "SUCCESS" ? <div /> : <label className="form">Full name:</label>}
@@ -47,7 +47,7 @@ export default class MyForm extends React.Component {
         {status === "SUCCESS" ? <div /> : <textarea className="formTextarea" name="Message"></textarea>}
         </div>
         <div class="dispTitle">
-        {status === "SUCCESS" ? <Link to="/choosepets">Back to adoption</Link> : <button className="formsubmit" type="submit">Submit</button>}
+        {status === "SUCCESS" ? <Link to="/choosepets">Back to adoption</Link> : <button className="formsubmit" type="submit">Contact</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
         </div>
       </form>

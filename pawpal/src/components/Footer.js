@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FaPaw } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter} from "react-icons/fa";
 import { FaHeart} from "react-icons/fa"
 import { FaCopyright} from "react-icons/fa"
+import Popup from "reactjs-popup";
+import MyForm from "./Form.js";
 
 export default function Footer({ footer,children,contact }) {
     return (
@@ -18,8 +20,9 @@ export default function Footer({ footer,children,contact }) {
                 <a href="About">About</a>
                 <a href="About">Events</a>
                 <a href="About">Team</a>
-                <a href="About">Contact Us {contact}</a>
-            
+                <Popup modal trigger={<a href="#">Contact Us {contact}</a>}>
+                          {close => <MyForm uemail={"nithinbs18@gmail.com"} close={close} msg={"Hello!! Contact us to put up your pet for adoption."}/>}
+                </Popup>
             </div>
 
             <div className="col-md-4 social text-center">

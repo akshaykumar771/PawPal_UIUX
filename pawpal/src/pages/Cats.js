@@ -10,7 +10,6 @@ import PetContainer from "../components/PetContainer";
       static contextType = PetContext; //refreshState
       componentDidMount(){
         let { setFlag1, unsetDogFlag } = this.context;
-        console.log("Seting pet basic");
         unsetDogFlag();
         setFlag1();
       }

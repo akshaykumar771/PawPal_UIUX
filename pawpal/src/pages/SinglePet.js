@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import SideNav from '../components/SideNav';
 import { PetContext } from "../context";
 import { Link } from "react-router-dom";
-import defaultBcg from "../images/room-1.jpeg";
 import Popup from "reactjs-popup";
 import MyForm from "../components/Form.js";
 import "../components/styles.css";
@@ -15,18 +14,16 @@ export default class SinglePet extends Component {
         super(props);
          this.state = {
            id: this.props.match.params.id,
-           defaultBcg,
+          //  defaultBcg,
            images: []
          };
       }
       componentDidMount(){
         let { setFlag2 } = this.context;
-        console.log("Seting pet details");
         setFlag2();
       }
       componentWillUnmount(){
         let { unsetFlag2 } = this.context;
-        console.log("Reseting pet details");
         unsetFlag2();
       }
       static contextType = PetContext;
@@ -101,7 +98,7 @@ export default class SinglePet extends Component {
                           <p>{uname}</p>
                           <p>{city}</p>
                           <Popup modal trigger={<button className="btn-primary"> Contact Owner</button>}>
-                          {close => <MyForm name={pet.name} slug={pet.slug} id={pet.id} uemail={pet.email} close={close}/>}
+                          {close => <MyForm name={pet.name} slug={pet.slug} id={pet.id} uemail={pet.email} close={close} msg={"Hello!! Please tell us something about yourself!!"}/>}
                           </Popup>
                         </div>
                       </div>

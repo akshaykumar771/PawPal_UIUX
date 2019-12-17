@@ -3,9 +3,9 @@ import { useContext } from "react";
 import { PetContext } from "../context";
 
 
-const getUnique = (items, value) => {
-  return [...new Set(items.map(item => item[value]))];
-};
+// const getUnique = (items, value) => {
+//   return [...new Set(items.map(item => item[value]))];
+// };
 export default function PetFilter({ pets }) {
    const context = useContext(PetContext);
    const {
@@ -14,18 +14,20 @@ export default function PetFilter({ pets }) {
      maxAge,
      minAge,
    } = context;
-  let genders = getUnique(pets, "gender");
-  genders = ["all", ...genders];
-  genders = genders.map((item, index) => {
-    return (
-      <option value={item} key={index} >
-        {item}
-      </option>
-    );
-  });
+  // let genders = getUnique(pets, "gender");
+  // genders = ["all", ...genders];
+  // genders = genders.map((item, index) => {
+  //   return (
+  //     <option value={item} key={index} >
+  //       {item}
+  //     </option>
+  //   );
+  // });
    return (
       <section className="col-md-9 offset-3 padding-tb">
       {/* <Title title="Filter" /> */}
+      <br />
+      <br />
       <form className="row filter-form">
         <div className="col-md-6 form-group">
           <label htmlFor="gender">select gender</label>
@@ -41,9 +43,7 @@ export default function PetFilter({ pets }) {
           </select>
         </div>
         <div className="col-md-6 form-group">
-        <label htmlFor="age">Age:</label>
-        <br />
-        <label htmlFor="age">{age} Months old</label>
+        <label htmlFor="age">Age</label>
         <input
           type="range"
           name="age"
@@ -53,6 +53,7 @@ export default function PetFilter({ pets }) {
           onChange={handleChange}
           className="form-control-range"
         />
+        <label htmlFor="age">{age} Months old</label>
       </div> 
       </form>
       </section>

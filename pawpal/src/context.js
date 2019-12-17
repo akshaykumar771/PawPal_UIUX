@@ -28,7 +28,6 @@ class PetsProvider extends Component {
            // order: "sys.createdAt"
            order: "-fields.age"
          });
-       console.log(response.items);
        let pets = this.formatData(response.items);
        let newPets = pets.filter(pet => pet.featured === true);
        let typeDog = pets.filter(pet => pet.type === "Dog");
@@ -130,11 +129,6 @@ class PetsProvider extends Component {
         flag1: true
       }  
     );
-    let {
-      flag1,
-      flag2
-    } = this.state;
-    console.log(this.state.flag1, flag2);
    }
    setFlag2 = () => {
     this.setState(
@@ -142,11 +136,6 @@ class PetsProvider extends Component {
         flag2: true
       }  
     );
-    let {
-      flag1,
-      flag2
-    } = this.state;
-    console.log(flag1, flag2);
     
    }
    unsetFlag1 = () => {
@@ -155,11 +144,6 @@ class PetsProvider extends Component {
         flag1: false
       }  
     );
-    let {
-      flag1,
-      flag2
-    } = this.state;
-    console.log(flag1, flag2);
    }
    unsetFlag2 = () => {
     this.setState(
@@ -167,11 +151,6 @@ class PetsProvider extends Component {
         flag2: false
       }  
     );
-    let {
-      flag1,
-      flag2
-    } = this.state;
-    console.log(flag1, flag2);
    }
 
    setDogFlag = () => {
