@@ -37,8 +37,8 @@ export default class SideNav extends Component {
           </div> 
           <div className="text-center">
             <p className="contact-text">Want to put up your pet for adoption?</p><br/>
-      <Popup modal trigger={<button className="btn btn-primary cstm-btn">Contact Us</button>}>
-                          {close => <MyForm uemail={"nithinbs18@gmail.com"} close={close} msg={"Hello!! Contact us to put up your pet for adoption."}/>}
+                <Popup modal trigger={<button className="btn btn-primary cstm-btn">Contact Us</button>}>
+                  {close => <MyForm name="" slug="" id="" uemail={"nithinbs18@gmail.com"} close={close} msg={"Hello!! Contact us to put up your pet for adoption."}/>}
                 </Popup>
                 </div>
       </div>
