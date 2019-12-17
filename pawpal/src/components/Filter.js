@@ -30,7 +30,7 @@ export default function PetFilter({ pets }) {
       <br />
       <form className="row filter-form">
         <div className="col-md-6 form-group">
-          <label htmlFor="gender">select gender</label>
+          <label htmlFor="gender">select Gender</label>
           <select
             name="gender"
             id="gender"
@@ -43,7 +43,7 @@ export default function PetFilter({ pets }) {
           </select>
         </div>
         <div className="col-md-6 form-group">
-        <label htmlFor="age">Age</label>
+        <label htmlFor="age"> Select Age</label>
         <input
           type="range"
           name="age"
