@@ -37,7 +37,7 @@ export default class MyForm extends React.Component {
         {status === "SUCCESS" ? <div /> : <input type="email" className="formText" name="userEmail" required/>}
         </div>
         {console.log(this.props.uemail)}
-        {status === "SUCCESS" ? <div /> : <input type = "hidden" name="email" value="nithinbs18@gmail.com" readOnly/>}
+        {status === "SUCCESS" ? <div /> : <input type = "hidden" name="email" value={this.props.uemail} readOnly/>}
         <div class="row dispSide">
         {status === "SUCCESS" ? <div /> : <label className="form">Phone no :</label>}
         {status === "SUCCESS" ? <div /> : <input type="number" className="formText" name="phone" required/> }
