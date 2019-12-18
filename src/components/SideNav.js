@@ -31,8 +31,8 @@ export default class SideNav extends Component {
        <div className="text-element content-element circles-list">
           <ol>
           <li><Link to ="/choosepets/" style={{color : "white", fontSize: "large",fontWeight: "bold"}}>Dogs or Cats??</Link></li>
-          {flag1 === false ? <li>Pet Basics </li> : <li >{dogflag === true ?<Link style={{color : "white", fontSize: "large",fontWeight: "bold"}} to="/choosepets/Dogs">Pet Basics </Link>: <Link style={{color : "white", fontSize: "large",fontWeight: "bold"}} to="/choosepets/Cats">Pet Basics </Link>}</li>}
-          {flag2 === false ? <li>Pet Details</li> : <li > <Link style={{color : "white", fontSize: "large",fontWeight: "bold"}}>Pet Details</Link></li>}
+          {flag1 === false ? <li className="libefore">Pet Basics </li> : <li >{dogflag === true ?<Link style={{color : "white", fontSize: "large",fontWeight: "bold"}} to="/choosepets/Dogs">Pet Basics </Link>: <Link style={{color : "white", fontSize: "large",fontWeight: "bold"}} to="/choosepets/Cats">Pet Basics </Link>}</li>}
+          {flag2 === false ? <li className="libefore">Pet Details</li> : <li > <Link style={{color : "white", fontSize: "large",fontWeight: "bold"}}>Pet Details</Link></li>}
           </ol>
           </div> 
           <div className="text-center">
